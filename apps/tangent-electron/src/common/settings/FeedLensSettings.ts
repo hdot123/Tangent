@@ -4,7 +4,7 @@ import Setting from './Setting'
 import { NodeSortStore } from './Sorting'
 
 const startAtDefinition: SettingDefinition<string> = {
-	name: 'Start At',
+	name: '起始位置',
 	description: 'Determines whether the feed starts from the beginning or the end of the list.',
 	validValues: [
 		{

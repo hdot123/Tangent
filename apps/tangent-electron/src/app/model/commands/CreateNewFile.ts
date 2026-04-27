@@ -102,7 +102,7 @@ export default class CreateNewFileCommand extends WorkspaceCommand {
 					const { preName, postName } = nameResult
 
 					this.workspace.viewState.modal.push(CreateFileDialog, {
-						title: 'Create New ' + rule.name,
+						title: '创建新 ' + rule.name,
 						preName,
 						postName,
 						context
@@ -112,7 +112,7 @@ export default class CreateNewFileCommand extends WorkspaceCommand {
 				}
 				else {
 					// Fall back to the default naming flow
-					name = 'New Note'
+					name = '新笔记'
 				}
 			}
 
@@ -187,7 +187,7 @@ export default class CreateNewFileCommand extends WorkspaceCommand {
 		}
 
 		if (!name) {
-			name = 'New Note'
+			name = '新笔记'
 		}
 
 		if (extension === false) {
@@ -348,13 +348,13 @@ export default class CreateNewFileCommand extends WorkspaceCommand {
 
 	getPaletteActions() {
 		const actions: PaletteAction[] = [{
-			name: 'Create New Note',
+			name: '创建新笔记',
 			command: this
 		}]
 
 		for (const rule of this.workspace.workspaceSettings.value.creationRules) {
 			actions.push({
-				name: 'Create ' + rule.name.value,
+				name: '创建 ' + rule.name.value,
 				command: this,
 				context: {
 					rule
@@ -369,18 +369,18 @@ export default class CreateNewFileCommand extends WorkspaceCommand {
 	getLabel(context: CreateNewFileCommandContext) {
 		const rule = context?.rule
 		if (rule) {
-			return 'Create ' + rawOrStoreValue(rule.name)
+			return '创建 ' + rawOrStoreValue(rule.name)
 		}
 		// TODO: Support all possible arguments
-		return 'Create New Note'
+		return '创建新笔记'
 	}
 
 	getTooltip(context: CreateNewFileCommandContext) {
 		const rule = context?.rule
 		if (rule) {
 			const description = rawOrStoreValue(rule.description)
-			return description || 'Creates a new ' + rawOrStoreValue(rule.name)
+			return description || '创建新 ' + rawOrStoreValue(rule.name)
 		}
-		return 'Creates a new note'
+		return '创建一个新笔记'
 	}
 }

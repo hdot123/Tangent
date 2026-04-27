@@ -152,7 +152,7 @@ function getContent(node: TreeNode, relativeTo: string | TreeNode, showFileType:
 	{#if showIcon}<NodeIcon {node} size="1em" />{/if}
 	<span class="path" class:highlightName>{@html content}</span>
 	{#if showModDate}
-		<span class="date" use:tooltip={"Last modified " + simpleTimestamp(node.modified)}>{shortestDayDate(node.modified)}</span>
+		<span class="date" use:tooltip={"最后修改 " + simpleTimestamp(node.modified)}>{shortestDayDate(node.modified)}</span>
 	{/if}
 </div>
 

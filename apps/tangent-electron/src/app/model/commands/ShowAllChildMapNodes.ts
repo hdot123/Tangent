@@ -61,13 +61,13 @@ export default class ShowAllChildMapNodesCommand extends WorkspaceCommand {
 	}
 
 	getLabel() {
-		return 'Show All Outgoing Connections in Map'
+		return '显示地图中所有出站连接'
 	}
 
 	getTooltip(context?: ShowAllChildMapNodesCommandContext) {
 		const name = this.getNode(context)?.node.value?.name
 		if (name) {
-			return 'Adds all of the nodes connected to ' + name + ' to the map.'
+			return '将所有连接到 ' + name + ' 的节点添加到地图。'
 		}
 		return ''
 	}

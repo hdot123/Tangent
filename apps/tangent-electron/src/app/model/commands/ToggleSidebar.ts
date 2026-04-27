@@ -30,10 +30,10 @@ export default class ToggleSidebarCommand extends WorkspaceCommand {
 	}
 
 	getLabel(_context) {
-		return 'Toggle Left Sidebar'
+		return '切换左侧边栏'
 	}
 
 	getTooltip(_context) {
-		return 'Toggles the left sidebar open and closed.'
+		return '切换左侧边栏的打开和关闭状态。'
 	}
 }

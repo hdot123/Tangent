@@ -91,12 +91,12 @@ function createNewStyle() {
 <nav class="buttonBar">
 	<button
 		on:click={disableAll}
-		use:tooltip={"Disable all custom styles."}
+		use:tooltip={"禁用所有自定义样式。"}
 	>Disable All</button>
 
 	<button class="stylesFolderButton"
 		on:click={openStylesFolder}
-		use:tooltip={"Opens the 'styles' folder within the workspaces '.tangent' configuration folder."}
+		use:tooltip={"打开工作区 '.tangent' 配置文件夹中的 'styles' 文件夹。"}
 	>
 		Open Styles Folder
 	</button>
@@ -113,7 +113,7 @@ function createNewStyle() {
 				<NodeLine node={style} relativeTo={'.tangent/styles/'} showFileType={true} showIcon={false} />
 			</span>
 			<button on:click={e => gotoFileClicked(style)}
-				use:tooltip={"Edit this CSS file."}
+				use:tooltip={"编辑此 CSS 文件。"}
 			>
 				<SvgIcon ref="arrows.svg#forward" size={16} />
 			</button>

@@ -57,14 +57,14 @@ export default class MergeWithPreviousSessionCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: MergeWithPreviousSessionCommandContext) {
-		return 'Merge With Previous Session'
+		return '与上一个会话合并'
 	}
 
 	getDefaultPaletteName() {
-		return 'Merge Current Session With Previous Session'
+		return '将当前会话与上一个会话合并'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'The content of the session will be merged with the previous session. Thread history will be applied on top, and the map connections will be merged together.'
+		return '该会话的内容将与上一个会话合并。线索历史将叠加，地图连接也将合并。'
 	}
 }

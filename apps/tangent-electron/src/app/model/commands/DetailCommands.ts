@@ -39,12 +39,12 @@ export class OpenDetailsCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		if (this.mode === false) return 'Close Details'
-		return 'Open Details'
+		if (this.mode === false) return '关闭详情'
+		return '打开详情'
 	}
 
 	getTooltip(context?: CommandContext) {
-		if (this.mode === false) return 'Closes the details of the current pane.'
-		return 'Opens the details of the current pane.'
+		if (this.mode === false) return '关闭当前面板的详情。'
+		return '打开当前面板的详情。'
 	}
 }

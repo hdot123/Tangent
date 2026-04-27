@@ -36,12 +36,12 @@ export class OpenPaneSettingsCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		if (this.mode === false) return 'Close Pane Settings'
-		return 'Open Pane Settings'
+		if (this.mode === false) return '关闭面板设置'
+		return '打开面板设置'
 	}
 
 	getTooltip(context?: CommandContext) {
-		if (this.mode === false) return 'Closes the settings for the current pane.'
-		return 'Opens the settings for the current pane.'
+		if (this.mode === false) return '关闭当前面板的设置。'
+		return '打开当前面板的设置。'
 	}
 }

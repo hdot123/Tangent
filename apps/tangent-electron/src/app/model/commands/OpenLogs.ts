@@ -12,10 +12,10 @@ export default class OpenLogsCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'Show Logs'
+		return '显示日志'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Opens the folder containing Tangent\'s log file.'
+		return '打开包含 Tangent 日志文件的文件夹。'
 	}
 }

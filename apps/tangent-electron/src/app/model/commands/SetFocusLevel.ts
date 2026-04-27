@@ -113,12 +113,12 @@ export default class SetFocusLevelCommand extends WorkspaceCommand {
 
 	getTooltip(context: FocusModeCommandContext) {
 		let { targetFocusLevel, toggle } = this.getApparentContext(context)
-		return `${toggle ? 'Toggle' : 'Switch to'} ${FocusLevel.getFullName(targetFocusLevel, false)}`
+		return `${toggle ? '切换' : '切换到'}${FocusLevel.getFullName(targetFocusLevel, false)}`
 	}
 
 	getLabel(context: FocusModeCommandContext) {
 		let { targetFocusLevel, toggle } = this.getApparentContext(context)
-		return `${toggle ? 'Toggle' : 'Set to'} ${FocusLevel.getFullName(targetFocusLevel)}`
+		return `${toggle ? '切换' : '设为'}${FocusLevel.getFullName(targetFocusLevel)}`
 	}
 
 	getPaletteActions() {
@@ -127,56 +127,56 @@ export default class SetFocusLevelCommand extends WorkspaceCommand {
 		}
 		return [
 			{
-				name: 'Exit Focus',
+				name: '退出专注模式',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Thread
 				}
 			},
 			{
-				name: 'Show Thread View',
+				name: '显示线索视图',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Thread
 				}
 			},
 			{
-				name: 'Show Map View',
+				name: '显示地图视图',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Map
 				}
 			},
 			{
-				name: 'Enter File Focus',
+				name: '进入文件专注',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.File
 				}
 			},
 			{
-				name: 'Enter Typewriter Focus',
+				name: '进入打字机专注',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Typewriter
 				}
 			},
 			{
-				name: 'Enter Paragraph Focus',
+				name: '进入段落专注',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Paragraph
 				}
 			},
 			{
-				name: 'Enter Line Focus',
+				name: '进入行专注',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Line
 				}
 			},
 			{
-				name: 'Enter Sentence Focus',
+				name: '进入句子专注',
 				command: this,
 				context: {
 					targetFocusLevel: FocusLevel.Sentence

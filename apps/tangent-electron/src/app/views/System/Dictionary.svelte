@@ -29,7 +29,7 @@ function deleteWord(word: string) {
 				<li>
 					<button
 						class="delete"
-						use:tooltip={`Remove "${item}" from the dictionary`}
+						use:tooltip={`从词典中移除 "${item}"`}
 						on:click={e => deleteWord(item)}
 					>
 						<SvgIcon ref="close.svg#close" size={16} />

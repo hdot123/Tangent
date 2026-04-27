@@ -4,7 +4,7 @@ import { getContext } from 'svelte'
 import type { CreateNewFileCommandContext } from '../model/commands/CreateNewFile'
 import type Workspace from '../model/Workspace'
 
-export let title: string = 'Create New File'
+export let title: string = '创建新文件'
 export let preName: string
 export let postName: string
 
@@ -69,7 +69,7 @@ function onNameInput() {
 					bind:this={nameElement}
 					on:input={onNameInput}></span>
 				{#if !nameText}
-					<span class="placeholder">Type New Note Name</span>
+					<span class="placeholder">输入新笔记名称</span>
 				{/if}
 				<span>{postName}</span>
 			</div>

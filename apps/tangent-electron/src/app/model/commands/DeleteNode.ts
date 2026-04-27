@@ -23,21 +23,21 @@ export default class DeleteNodeCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Delete File'
+		return '删除文件'
 	}
 
 	getLabel(context: DeleteNodeCommandContext) {
 		const target = context?.target ?? this.workspace.viewState.tangent.currentNode.value
 		if (target && typeof target !== 'string') {
-			return `Delete "${target.name}"`
+			return `删除 "${target.name}"`
 		}
 		return this.getName()
 	}
 
 	getTooltip(context?: CommandContext) {
 		if (isMac) {
-			return 'Deletes the file from the workspace. The file will be moved to the Trash.'
+			return '从工作区删除该文件。文件将被移至废纸篓。'
 		}
-		return 'Deletes the file from the workspace. The file will be moved to the Recycling Bin.'
+		return '从工作区删除该文件。文件将被移至回收站。'
 	}
 }

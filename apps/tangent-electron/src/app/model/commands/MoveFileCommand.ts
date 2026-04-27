@@ -59,14 +59,14 @@ export default class MoveFileCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Move File'
+		return '移动文件'
 	}
 
 	getDefaultPaletteName() {
-		return 'Move File to another folder'
+		return '将文件移动到其他文件夹'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Moves the current file to a different folder in the workspace.'
+		return '将当前文件移动到工作区中的其他文件夹。'
 	}
 }

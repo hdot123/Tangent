@@ -27,6 +27,6 @@ This component accepts one callback: it is fired when the button has been clicke
 request insertion of the template string into the Template input.
 -->
 
-<button class="subtle" use:tooltip={`Click to insert template token "${templateText}" into template string`} on:click={handleClick}>
+<button class="subtle" use:tooltip={`点击插入模板令牌 "${templateText}" 到模板字符串`} on:click={handleClick}>
 	{templateText}
 </button>

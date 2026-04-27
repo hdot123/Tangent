@@ -38,10 +38,10 @@ export default class ShowPreviousSessionCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Show Previous Session'
+		return '显示上一个会话'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Pulls the previous session from the archive so that it can be referenced.'
+		return '从归档中取出上一个会话以便参考。'
 	}
 }

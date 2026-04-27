@@ -122,7 +122,7 @@ function selectOption(option: Option, event) {
 	</div>
 	<ModalInputSelect
 		{options}
-		placeholder="Type to filter folders..."
+		placeholder="输入以筛选文件夹..."
 		bind:selectedIndex
 		bind:text
 		{onAutocomplete}

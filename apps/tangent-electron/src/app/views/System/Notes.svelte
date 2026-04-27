@@ -46,7 +46,7 @@ async function getSpellCheckLanguages() {
 	<div class="settingsGroup">
 		<SettingView setting={settings.noteFont}
 			getValues={workspace.api.system.getAllFonts} />
-		<SettingView setting={settings.noteFontSize} name="Font Size" />
+		<SettingView setting={settings.noteFontSize} name="字体大小" />
 		<SettingView setting={settings.lineHeight} />
 		<SettingView setting={settings.noteWidthMax} />
 		<SettingView setting={settings.noteMargins} />
@@ -54,7 +54,7 @@ async function getSpellCheckLanguages() {
 	<div class="settingsGroup">
 		<SettingView setting={settings.fixedTitle} />
 		<SettingView setting={settings.hangingHeaders} />
-		<SettingView setting={settings.cardViewCardsHoldAltToScroll} name="Require Alt to Scroll Cards" />
+		<SettingView setting={settings.cardViewCardsHoldAltToScroll} name="需要 Alt 键滚动卡片" />
 		<SettingView setting={settings.crossOutFinishedTodos} />
 	</div>
 

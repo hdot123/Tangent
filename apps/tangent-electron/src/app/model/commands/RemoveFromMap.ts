@@ -131,12 +131,12 @@ export class RemoveNodeFromMapCommand extends RemoveFromMapCommand {
 
 	getLabel(context: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Remove ${context?.node?.name} from Map`
+		return `从地图中移除 ${context?.node?.name}`
 	}
 
 	getTooltip(context?: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Removes the node representing ${context?.node?.name} from the map.`
+		return `从地图中移除代表 ${context?.node?.name} 的节点。`
 	}
 }
 
@@ -172,12 +172,12 @@ export class RemoveNodeAndChildrenFromMapCommand extends RemoveFromMapCommand {
 
 	getLabel(context: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Remove ${context?.node?.name} and All Children from Map`
+		return `从地图中移除 ${context?.node?.name} 及所有子项`
 	}
 
 	getTooltip(context: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Removes the nodes representing ${context?.node?.name} and all of its connected children from the map.`
+		return `从地图中移除代表 ${context?.node?.name} 及其所有连接子项的节点。`
 	}
 }
 
@@ -219,12 +219,12 @@ export class RemoveEverythingButNodeFromMapCommand extends RemoveFromMapCommand 
 
 	getLabel(context: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Remove All But ${context?.node?.name} and Children from Map`
+		return `仅保留 ${context?.node?.name} 及子项在地图中`
 	}
 
 	getTooltip(context: RemoveFromMapCommandContext) {
 		context = this.fillContext(context)
-		return `Removes all nodes from the map except those representing ${context?.node?.name} and its connected children.`
+		return `从地图中移除所有节点，仅保留代表 ${context?.node?.name} 及其连接子项的节点。`
 	}
 }
 
@@ -258,10 +258,10 @@ export class RemoveEverythingButThreadFromMapCommand extends RemoveFromMapComman
 	}
 
 	getLabel(context: RemoveFromMapCommandContext) {
-		return `Remove All But Current Thread from Map`
+		return `仅保留当前线索在地图中`
 	}
 
 	getTooltip(context: RemoveFromMapCommandContext) {
-		return `Removes nodes but those representing the items in the current thread from the map.`
+		return `从地图中移除所有节点，仅保留当前线索中的项。`
 	}
 }

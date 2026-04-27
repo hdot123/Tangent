@@ -4,7 +4,7 @@ import Setting from './Setting'
 import { NodeSortStore } from './Sorting'
 
 const showWordCountDefinition: SettingDefinition<boolean> = {
-	name: 'Show Word Count',
+	name: '显示字数',
 	defaultValue: true
 }
 

@@ -117,18 +117,18 @@ export default class ChangeCurrentFileCommand extends WorkspaceCommand {
 	getLabel(context: ChangeFileCommandContext) {
 		switch (context?.mode ?? this.mode) {
 			case 'left':
-				return 'Move to Left Note'
+				return '移动到左侧笔记'
 			case 'right':
-				return 'Move to Right Note'
+				return '移动到右侧笔记'
 		}
 	}
 
 	getTooltip(context: ChangeFileCommandContext) {
 		switch (context?.mode ?? this.mode) {
 			case 'left':
-				return 'Shifts focus one pane to the left.'
+				return '将焦点向左移动一个面板。'
 			case 'right':
-				return 'Shifts focus one pane to the right.'
+				return '将焦点向右移动一个面板。'
 		}
 	}
 }

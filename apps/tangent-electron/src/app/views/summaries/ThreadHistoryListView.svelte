@@ -44,7 +44,7 @@ function onItemClicked(event: MouseEvent, item: ThreadHistoryItem) {
 					class:current={current === node}
 				>{node?.name}</span>
 			{:else}
-				<span class="empty">Empty</span>
+				<span class="empty">空</span>
 			{/each}
 		</button>
 	{/each}

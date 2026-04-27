@@ -109,13 +109,13 @@ export default class CloseFileCommand extends WorkspaceCommand {
 	getTooltip(context: CloseFileCommandContext) {
 		switch (context?.mode ?? this.mode) {
 			case 'current':
-				return 'Close this file.'
+				return '关闭此文件。'
 			case 'others':
-				return 'Close other files.'
+				return '关闭其他文件。'
 			case 'left':
-				return 'Close files to the left.'
+				return '关闭左侧文件。'
 			case 'right':
-				return 'Close files to the right.'
+				return '关闭右侧文件。'
 		}
 	}
 
@@ -126,13 +126,13 @@ export default class CloseFileCommand extends WorkspaceCommand {
 	getModeDisplayName(mode: CloseFileMode) {
 		switch (mode) {
 			case 'current':
-				return 'Close Current File'
+				return '关闭当前文件'
 			case 'others':
-				return 'Close Other Files'
+				return '关闭其他文件'
 			case 'left':
-				return 'Close Files to the Left'
+				return '关闭左侧文件'
 			case 'right':
-				return 'Close Files to the Right'
+				return '关闭右侧文件'
 		}
 	}
 }

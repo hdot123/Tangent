@@ -265,12 +265,12 @@ function onViewContextMenu(event: MouseEvent) {
 
 		<div class="spacer"></div>
 
-		<PopUpButton name="New Note"
+		<PopUpButton name="新建笔记"
 			buttonClass="subtle"
 			command={workspace.commands.createNewFile}
 			placement="bottom-start"
 			menuMode="low-profile"
-			tooltip="Create New Note"
+			tooltip="创建新笔记"
 			bind:showMenu={newNoteMenuIsOpen}
 			closeMenuOnClick
 		>
@@ -279,7 +279,7 @@ function onViewContextMenu(event: MouseEvent) {
 				<use href="file.svg#plus"/>
 			</svg></svelte:fragment>
 			<div class="popUpButtonList newNotes">
-				<h1>New Note</h1>
+				<h1>新建笔记</h1>
 				<div class="buttonGroup vertical">
 					{#each workspace.workspaceSettings.value.creationRules.value.filter(r => r.showInMenu.value) as rule}
 						<button

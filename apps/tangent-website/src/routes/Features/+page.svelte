@@ -5,157 +5,157 @@ import '../style.css'
 </script>
 <article>
 	<section>
-		<h1>Threads of Thought</h1>
-		<ImageSwitch path="/shots/thread" class="screenshot" alt="An example of Tangent's thread view, with many notes stacked on top." />
+		<h1>思维线索</h1>
+		<ImageSwitch path="/shots/thread" class="screenshot" alt="Tangent 线索视图示例，多个笔记堆叠展示。" />
 		<p>
-			As you follow and create links, the path behind you is retained and represented with horizontally sliding panels in the <span class="accentText">Thread View</span>.
-			These panels let you easily slide up and down the path of your thought process.
+			当你跟随和创建链接时，你的路径会被保留，并在<span class="accentText">线索视图</span>中以水平滑动面板的形式展示。
+			这些面板让你可以轻松地在思维路径上滑动。
 		</p>
 		<p>
-			Explore freely without losing your place.
+			自由探索，不丢失位置。
 		</p>
 	</section>
 
 	<section>
-		<h1>Maps of Cognition</h1>
-		<ImageSwitch path="/shots/blades-map" class="screenshot" alt="Able to track the complex connections between many notes, Tangent can be an excellent tabletop RPG companion." />
+		<h1>认知地图</h1>
+		<ImageSwitch path="/shots/blades-map" class="screenshot" alt="Tangent 可以追踪笔记之间的复杂连接，是桌面 RPG 的绝佳伙伴。" />
 		<p>
-			Get a bird's eye view of your thought process with the <span class="accentText">Map View</span>.
-			Nodes and connections are automatically created as you write and navigate.
+			通过<span class="accentText">地图视图</span>鸟瞰你的思维过程。
+			节点和连接在你写作和导航时自动创建。
 		</p>
 		<p>
-			Gain perspective after diving into a warren of your own thoughts.
-			Remind yourself of what you were doing yesterday.
-			Find new connections and dive back in.
+			在深入自己思维的迷宫后获得全局视角。
+			提醒自己昨天在做什么。
+			发现新的联系并重新投入。
 		</p>
 		<p>
-			Never get lost.
+			不再迷失。
 		</p>
 	</section>
 	
 
 
 	<section>
-		<h1>Beautiful, Accessible Markdown<sup>ish</sup></h1>
-		<ImageSwitch path="/shots/markdown-syntax" class="screenshot" alt="An example of Tangent's display of markdown text." />
+		<h1>优雅的 Markdown<sup>风格</sup></h1>
+		<ImageSwitch path="/shots/markdown-syntax" class="screenshot" alt="Tangent 中 Markdown 文本渲染示例。" />
 		<p>
-			Tangent fully styles your markdown as you type.
-			Markup notation melts away as you leave it behind and reappears as soon as you need it.
+			Tangent 在你输入时即完整渲染 Markdown 样式。
+			标记符号在你不需要时消隐，需要时立即显示。
 		</p>
 		<p>
-			Supports headers, bold, italics, highlights, web links, embedded images, lists, YAML front matter, LaTeX math, Mermaid Diagrams, and code blocks with syntax highlighting.
-		</p>
-	</section>
-
-
-	<section>
-		<h1>Effortless Wiki Links</h1>
-		<ImageSwitch path="/shots/wiki-links" class="screenshot" alt="An example of how many wiki links to a topic can be viewed as back links." />
-		<p>
-			Tangent uses wiki-style <span class="accentText">[[Double Bracket Links]]</span> to connect notes together by filename.
-			Autocomplete makes this easy.
-		</p>
-		<p>
-			Notes know what they link to <em>and</em> what links to <em>them.</em>
-			If you're coming from Obsidian, the links between your notes already work!
+			支持标题、加粗、斜体、高亮、网页链接、嵌入图片、列表、YAML Front Matter、LaTeX 数学公式、Mermaid 图表和带语法高亮的代码块。
 		</p>
 	</section>
 
 
 	<section>
-		<h1>Embedded Media</h1>
+		<h1>轻松的维基链接</h1>
+		<ImageSwitch path="/shots/wiki-links" class="screenshot" alt="多个维基链接的反向链接展示示例。" />
+		<p>
+			Tangent 使用维基风格的<span class="accentText">[[双方括号链接]]</span>通过文件名连接笔记。
+			自动补全让这一切变得简单。
+		</p>
+		<p>
+			笔记知道自己链接到了什么，<em>也</em>知道什么链接到了<em>自己</em>。
+			如果你从 Obsidian 转过来，你的笔记链接已经可以直接使用！
+		</p>
+	</section>
+
+
+	<section>
+		<h1>嵌入媒体</h1>
 		<ImageSwitch path="/shots/embeds" class="screenshot" alt="A showcase of embedded audio, video, and images." />
 		<p>
-			Tangent displays images, audio, video, and PDFs within your workspace. Embed local and remote media directly into your notes.
+			Tangent 在工作区内展示图片、音频、视频和 PDF。直接将本地或远程媒体嵌入你的笔记。
 		</p>
 	</section>
 
 
 	<section>
-		<h1>Minimalist Focus Mode</h1>
+		<h1>极简专注模式</h1>
 		<ImageSwitch path="/shots/focus-mode" class="screenshot" alt="An example of Tangent's sentence-level focus mode." />
 		<p>
-			Dial in your focus to one note, one paragraph, one sentence.
-			Tangent clears everything else out of the way while keeping your place.
+			将注意力集中在一条笔记、一个段落、一句话上。
+			Tangent 会清除其他干扰，同时保留你的位置。
 		</p>
 	</section>
 
 	<section>
-		<h1>Tags</h1>
+		<h1>标签</h1>
 		<ImageSwitch path="/shots/todo-tag" class="screenshot" alt="An example of using tags and to-do items in Tangent."/>
 		<p>
-			Easily mark up your notes with additional context.
-			Includes support for nested tags for the organizational extremists.
+			轻松为笔记添加额外上下文标记。
+			支持嵌套标签，满足组织狂的需求。
 		</p>
 
-		<h1>To-Do Items</h1>
+		<h1>待办事项</h1>
 		<p>
-			Add to-do checkboxes to your list items to keep track of elements still in progress.
+			为列表项添加待办复选框，跟踪仍在进行中的任务。
 		</p>
 	</section>
 	
 
 	<section>
-		<h1>Custom Query Language</h1>
+		<h1>自定义查询语言</h1>
 		<ImageSwitch path="/shots/queries" class="screenshot" alt="An example of Tangent's query language in action." />
 		<p>
-			Easily find notes from across your workspace based on links, tags, todos, or just any bit of text, using a custom query language.
+			使用自定义查询语言，根据链接、标签、待办或任意文本轻松查找工作区中的笔记。
 		</p>
 		<p>
-			Save those queries and reference them at any time. You can even use them in other queries!
+			保存查询并随时引用。你甚至可以在其他查询中使用它们！
 		</p>
 	</section>
 
 
 	<section>
-		<h1>Robust Keyboard Control</h1>
+		<h1>强大的键盘控制</h1>
 		<ImageSwitch path="/shots/command-palette" class="screenshot" alt="An example of Tangent's command palette." />
 		<p>
-			A shortcut for nearly every action, and a command palette for all of the rest. All customizable.
+			几乎所有操作都有快捷键，其余操作可通过命令面板完成。全部可自定义。
 		</p>
 		<p>
-			Create and move between notes. Add and follow connections. Reorganize your files.
-			All without taking your fingers from your keyboard.
+			创建和切换笔记。添加和跟踪链接。重新组织文件。
+			一切无需离开键盘。
 		</p>
 	</section>
 
 
 	<section>
-		<h1>Customizable Environment</h1>
+		<h1>可自定义的环境</h1>
 		<ImageSwitch path="/shots/settings" class="screenshot six" alt="An example of Tangent's Settings." />
 		<p>
-			Customize essential fonts, colors, and spacing settings directly in Tangent.
+			直接在 Tangent 中自定义字体、颜色和间距等基本设置。
 		</p>
 		<p>
-			Configure <span class="accentText">Creation Rules</span> to automate the process of creating new notes with templated names and automatic folder locations.
+			配置<span class="accentText">创建规则</span>来自动化新笔记的创建过程，支持模板化命名和自动文件夹位置。
 		</p>
 		<p>
-			Dive deep into customization with custom CSS, including built-in support for targeting specific folders with custom styles.
+			通过自定义 CSS 深度定制，内置支持为特定文件夹应用自定义样式。
 		</p>
 		<p>
-			Make your workspace your own. Make it comfortable.
+			让你的工作区属于你。让它舒适。
 		</p>
 	</section>
 	
 
 
-	<h1>Plain Text Under Your Control</h1>
+	<h1>你掌控的纯文本</h1>
 	<p>
-		Tangent reads and writes markdown files directly on your computer.
-		There is no server to connect to.
-		Your notes are always ready for you, no matter what the internet is doing.
+		Tangent 直接读写你电脑上的 Markdown 文件。
+		无需连接服务器。
+		无论网络状况如何，你的笔记随时可用。
 	</p>
 	<p>
-		Your notes are not locked away in a proprietary format.
-		They remain open to any program that can read plain text.
+		你的笔记不会被锁定在专有格式中。
+		任何能读取纯文本的程序都可以访问。
 	</p>
 	<p>
-		Sync and version your notes with whatever system you prefer.
-		Git, iCloud, Drive, Dropbox, it all just works.
+		用你喜欢的任何系统同步和版本控制笔记。
+		Git、iCloud、Google Drive、Dropbox，都可以正常使用。
 	</p>
 
 	<p class="action">
-		<a href="/Download" class="local buttonLink">Download Tangent</a>
+		<a href="/Download" class="local buttonLink">下载 Tangent</a>
 	</p>
 </article>
 

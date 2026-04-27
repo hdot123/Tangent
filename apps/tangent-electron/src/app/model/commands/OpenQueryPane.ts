@@ -60,10 +60,10 @@ export default class OpenQueryPaneCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'New Search Query'
+		return '新建搜索查询'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Creates and opens a new search query in a new pane.'
+		return '在新面板中创建并打开新的搜索查询。'
 	}
 }

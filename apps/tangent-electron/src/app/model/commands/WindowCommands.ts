@@ -39,11 +39,11 @@ export class FloatWindowCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'Float Window'
+		return '浮动窗口'
 	}
 
 	getTooltip(context: CommandContext) {
-		return 'Toggles whether this window floats over other windows.'
+		return '切换此窗口是否浮动在其他窗口之上。'
 	}
 
 	getChecked() {
@@ -87,11 +87,11 @@ export class FullscreenWindowCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'Fullscreen Window'
+		return '全屏窗口'
 	}
 
 	getTooltip(context: CommandContext) {
-		return 'Toggles whether this window is fullscreen.'
+		return '切换此窗口是否全屏。'
 	}
 
 	getChecked() {

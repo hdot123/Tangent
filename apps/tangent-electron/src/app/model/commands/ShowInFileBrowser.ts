@@ -45,11 +45,11 @@ export default class ShowInFileBrowserCommand extends WorkspaceCommand {
 	getTooltip(context: OpenInFileBrowserCommandContext) {
 		const target = context?.target ?? this.workspace.viewState.tangent.currentNode.value
 		if (typeof target === 'string') {
-			return 'Shows this in the file browser.'
+			return '在文件浏览器中显示此项。'
 		}
 		if (target) {
-			return `Opens the "${target.name}" ${target.fileType === 'folder' ? 'folder' : 'file'} in the file browser.`
+			return `在文件浏览器中打开 ${target.fileType === 'folder' ? '文件夹' : '文件'} "${target.name}"`
 		}
-		return 'Opens the current file or folder in the file browser.'
+		return '在文件浏览器中打开当前文件或文件夹。'
 	}
 }

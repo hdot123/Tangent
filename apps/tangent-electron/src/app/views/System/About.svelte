@@ -15,30 +15,30 @@ function openDocumentation() {
 	</p>
 	<p class="version">v{workspace.version}</p>
 	<p>
-		<span class="tangent">Tangent</span> is made by 
-		<a target="_blank" rel="noreferrer" href="http://tangentnotes.com/About">Taylor Hadden</a>.
-		It is designed to help you follow your interest as you write.
-		Never get lost, never lose your train of thought.
+		<span class="tangent">Tangent</span> 由
+		<a target="_blank" rel="noreferrer" href="http://tangentnotes.com/About">Taylor Hadden</a>
+		开发。它旨在帮助你在写作时追随自己的兴趣。
+		不再迷失方向，不再丢失思路。
 	</p>
 	<p>
 		
 	</p>
 	<p>
 		<!-- svelte-ignore a11y-invalid-attribute -->
-		Take a look at <a href="#" on:click={openDocumentation} class="local">the documentation</a> if you have a question.
-		If that doesn't fill your needs, please reach out on
+		如有疑问，请查看<a href="#" on:click={openDocumentation} class="local">文档</a>。
+		如果文档不能满足你的需求，可以通过以下方式联系我们
 		<a target="_blank" rel="noreferrer" href="https://discord.gg/6VpvhUnxFe">Discord</a>,
 		<a target="_blank" rel="noreferrer" href="https://indieapps.space/@tangentnotes">Mastodon</a>, or through
 		<a target="_blank" rel="noreferrer" href={`mailto: contact@tangentnotes.com?Subject=Tangent v${workspace.version}`}>email</a>.
 	</p>
 	<p>
-		Tangent is currently in an early development state.
-		If you encounter a bug, have a question, or think of a feature you would love to have, please
-		<a target="_blank" rel="noreferrer" href="https://github.com/suchnsuch/tangent-public/issues/new">open an issue on GitHub</a>
-		or reach out at any of the socials above.
+		Tangent 目前处于早期开发阶段。
+		如果你遇到 Bug、有问题或想建议新功能，请
+		<a target="_blank" rel="noreferrer" href="https://github.com/suchnsuch/tangent-public/issues/new">在 GitHub 上提交 Issue</a>
+		或通过上述社交平台联系我们。
 	</p>
-	<h1>Supporters</h1>
-	<p style:margin-bottom="0">The following people have made exceptional contributions:</p>
+	<h1>支持者</h1>
+	<p style:margin-bottom="0">以下人员做出了卓越贡献：</p>
 	<ul>
 		<li>Trevor Slaton</li>
 		<li>Paul Williams</li>

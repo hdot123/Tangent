@@ -27,15 +27,15 @@ function getButtonText(_m?, _n?) {
 		case 'idle':
 		case 'up-to-date':
 		case 'error':
-			return 'Check for Updates'
+			return '检查更新'
 		case 'checking':
-			return 'Checking…'
+			return '检查中…'
 		case 'available':
-			return `Download ${version}`
+			return `下载 ${version}`
 		case 'downloading':
-			return `Downloading ${version}`
+			return `正在下载 ${version}`
 		case 'ready':
-			return `Quit and Update to ${version}`
+			return `退出并更新到 ${version}`
 	}
 }
 
@@ -64,16 +64,16 @@ function laterButtonClick() {
 	</p>
 	{#if $channel === 'beta'}
 		<p class="message">
-			The beta channel may contain bugs.
-			If you encounter a bug, please
-			<a target="_blank" rel="noreferrer" href="https://mastodon.social/@taylorhadden">tell me on Mastodon</a>.
+			Beta 渠道可能包含 Bug。
+			如果你遇到 Bug，请
+			<a target="_blank" rel="noreferrer" href="https://mastodon.social/@taylorhadden">在 Mastodon 上告诉我</a>。
 		</p>
 	{:else if $channel === 'alpha'}
 		<p class="message warning">
-			This channel <em>will</em> contain bugs.
-			Only select this channel if you are comfortable with risking stability.
-			If you encounter a bug, please
-			<a target="_blank" rel="noreferrer" href="https://mastodon.social/@taylorhadden">tell me on Mastodon</a>.
+			此渠道<em>一定</em>会包含 Bug。
+			只有在你可以接受稳定性风险时才选择此渠道。
+			如果你遇到 Bug，请
+			<a target="_blank" rel="noreferrer" href="https://mastodon.social/@taylorhadden">在 Mastodon 上告诉我</a>。
 		</p>
 	{/if}
 
@@ -93,32 +93,32 @@ function laterButtonClick() {
 
 		{#if $mode === 'up-to-date'}
 			<p class="info up-to-date" transition:slide={{ duration: 300 }}>
-				You are up to date!
+				你已是最新版本！
 			</p>
 		{/if}
 
 		{#if $mode === 'ready'}
 			<p class="info ready" transition:slide={{ duration: 300 }}>
-				The update to {$nextUpdate.version} is ready!
-				The update will be applied automatically on exit, or you can update now.
+				更新到 {$nextUpdate.version} 已准备就绪！
+				更新将在退出时自动应用，或者你也可以现在更新。
 			</p>
 			{#if suppressUpdates}
 				<p class="info">
-					Update notifications are suppressed until next exit.
+					更新通知已抑制，直到下次退出。
 				</p>
 			{:else}
 				<p class="laterButton">
-					<button on:click={laterButtonClick}>Update Later</button>
+					<button on:click={laterButtonClick}>稍后更新</button>
 				</p>
 			{/if}
 		{/if}
 		{#if $mode === 'error'}
 			<div class="info" transition:slide={{ duration: 300 }}>
 				<p>
-					The update {#if $nextUpdate}to {$nextUpdate.version}{/if} failed!
+					更新{#if $nextUpdate}到 {$nextUpdate.version}{/if}失败！
 				</p>
 				<p class="error">
-					Error: "{$errorMessage}"
+					错误："{$errorMessage}"
 				</p>
 				<p>
 					You can try to check for updates again, or
@@ -129,7 +129,7 @@ function laterButtonClick() {
 		{/if}
 
 		<p class="lastChecked" class:show={$lastChecked != null}>
-			Currently on v{workspace.version}.
+			当前版本 v{workspace.version}。
 			{#if $lastChecked != null}
 				Last checked: {dates.shortestDayDate($lastChecked)}, {dates.clockTime($lastChecked)}
 			{/if}

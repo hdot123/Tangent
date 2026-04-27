@@ -8,10 +8,10 @@ export class OpenDocumentationCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Open Documentation'
+		return '打开文档'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Opens Tangent\'s documentation as a separate workspace.'
+		return '将 Tangent 的文档作为单独的工作区打开。'
 	}
 }

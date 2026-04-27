@@ -9,10 +9,10 @@ export default class OpenChangelogCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'Open Changelog'
+		return '打开更新日志'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Opens Tangent\'s changelog dialog.'
+		return '打开 Tangent 的更新日志对话框。'
 	}
 }

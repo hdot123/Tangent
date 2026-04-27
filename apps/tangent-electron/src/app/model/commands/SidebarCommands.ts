@@ -26,7 +26,7 @@ export class RenameSidebarItem extends SidebarCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Rename Sidebar Item'
+		return '重命名侧边栏项'
 	}
 }
 
@@ -56,6 +56,6 @@ export class DeleteSidebarItem extends SidebarCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Delete Sidebar Item'
+		return '删除侧边栏项'
 	}
 }

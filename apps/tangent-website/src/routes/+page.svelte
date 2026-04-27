@@ -4,53 +4,53 @@ import './style.css'
 </script>
 
 <article class="note">
-	<ImageSwitch class="example_notes screenshot" path="/shots/thread-short" alt="An example of Tangent's threaded sliding panels."/>
+	<ImageSwitch class="example_notes screenshot" path="/shots/thread-short" alt="Tangent 线索滑动面板示例"/>
 	
 	<p style="font-style: italic; text-align: center;">
-		A clean and powerful open source notes app for Mac, Windows, and Linux
+		一款简洁强大的开源笔记应用，支持 Mac、Windows 和 Linux
 	</p>
 
-	<p class="action"><a class="local buttonLink" href="/Download">Download Tangent</a></p>
+	<p class="action"><a class="local buttonLink" href="/Download">下载 Tangent</a></p>
 
-	<h1>Write Tangentially</h1>
+	<h1>沿着思维写作</h1>
 	<p>
-		Tangent is designed to let you write the way you think.
-		Your thoughts are connected;
-		Tangent lets you link to existing notes and make new ones with ease.
+		Tangent 旨在让你按照自己的思维方式来写作。
+		你的思维是相互关联的；
+		Tangent 让你可以轻松链接到现有笔记并创建新笔记。
 	</p>
 	<p>
-		Let your mind wander along the path of interest.
-		Don't suppress thoughts, embrace them.
+		让你的思绪沿着兴趣的路径自由漫游。
+		不要压制思维，拥抱它们。
 	</p>
 
 	
-	<h1>Explore With Confidence</h1>
+	<h1>自信地探索</h1>
 	
 	<p>
-		Tangent visualizes the path of your thoughts with elegant sliding panels
-		and a branching map that builds itself as you write. You always know where you are and where you've been.
+		Tangent 通过优雅的滑动面板和自动构建的分支地图来可视化你的思维路径。
+		你始终知道自己在哪里，去过哪里。
 	</p>
-	<img class="example_map" src="/map.png" alt="An example of a map of connections between visited notes."/>
+	<img class="example_map" src="/map.png" alt="已访问笔记之间的连接地图示例"/>
 	<p>
-		Follow the thread of your thoughts in any direction they take you. Never get lost.
+		沿着思维的线索，朝任何方向前进。不再迷失方向。
 	</p>
 
-	<h1>Own Your Own Thoughts</h1>
+	<h1>拥有自己的思维</h1>
 	<p>
-		Tangent works with local files directly on your device.
-		Notes are stored as markdown files. They can be read or written to by any text editor.
+		Tangent 直接处理设备上的本地文件。
+		笔记以 Markdown 文件存储，可以使用任何文本编辑器读取和编辑。
 	</p>
 	<p>
-		Nothing is hidden from you. Everything is yours.
-	</p>
-
-	<h1>Free Forever</h1>
-	<p>
-		Tangent is open source under the Apache 2.0 license. Its source code can be found on
-		<a href="https://github.com/suchnsuch/Tangent" target="_blank">Github</a>.
+		没有什么是被隐藏的。一切都是你的。
 	</p>
 
-	<p class="action"><a class="local buttonLink" href="/Download">Get Started</a></p>
+	<h1>永久免费</h1>
+	<p>
+		Tangent 采用 Apache 2.0 许可证开源。源代码可在
+		<a href="https://github.com/hdot123/Tangent" target="_blank">Github</a> 上找到。
+	</p>
+
+	<p class="action"><a class="local buttonLink" href="/Download">开始使用</a></p>
 </article>
 
 <style lang="scss">

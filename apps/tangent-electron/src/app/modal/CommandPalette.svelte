@@ -36,18 +36,18 @@ $:placeholder = getPlaceholder(searchInput)
 
 function getPlaceholder(text: string) {
 	if (!text) {
-		return 'Type to search for a file to jump to'
+		return '输入以搜索要跳转的文件'
 	}
 	switch (text) {
 		case '#':
 		case '# ':
-			return 'Search for a tag'
+			return '搜索标签'
 		case '>':
 		case '> ':
-			return 'Run a command'
+			return '运行命令'
 		case '?':
 		case '? ':
-			return 'Search in files'
+			return '在文件中搜索'
 	}
 	return ''
 }
@@ -434,7 +434,7 @@ function shouldShowShortcut(action: PaletteAction) {
 			{/if}
 		</svelte:fragment>
 		<div class="empty" slot="empty">
-			Nothing found. Try a different search query.
+			未找到结果。请尝试不同的搜索词。
 		</div>
 	</ModalInputSelect>
 	{#if options[selectedIndex]?.action}

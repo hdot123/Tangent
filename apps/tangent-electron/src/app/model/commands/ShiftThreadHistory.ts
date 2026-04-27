@@ -61,10 +61,10 @@ export default class ShiftThreadHistoryCommand extends WorkspaceCommand {
 		const direction = this.defaultDirection
 
 		if (direction > 0) {
-			return 'Go Forward'
+			return '前进'
 		}
 		else {
-			return 'Go Back'
+			return '后退'
 		}
 	}
 
@@ -87,10 +87,10 @@ export default class ShiftThreadHistoryCommand extends WorkspaceCommand {
 		const direction = context?.direction ?? this.defaultDirection
 
 		if (direction > 0) {
-			return 'Go Forward in Thread History'
+			return '在线索历史中前进'
 		}
 		else {
-			return 'Go Backward in Thread History'
+			return '在线索历史中后退'
 		}
 	}
 }

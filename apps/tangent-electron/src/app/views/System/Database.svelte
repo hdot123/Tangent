@@ -10,11 +10,11 @@ let settings = workspace.settings
 </script>
 
 <main>
-	<h2>Files</h2>
+	<h2>文件</h2>
 	<div class="settingsGroup">
 		<SettingView setting={settings.dirtyIndicatorVisibility} />
 	</div>	
-	<h2>Links</h2>
+	<h2>链接</h2>
 	<div class="settingsGroup">
 		<SettingView setting={settings.linkAutocompleteForm} />
 	</div>

@@ -35,13 +35,13 @@ export default class SaveCurrentFileCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Save File'
+		return '保存文件'
 	}
 
 	getLabel(context?: CommandContext) {
 		const node = this.workspace.viewState.tangent?.currentNode.value
 		if (node instanceof File) {
-			return `Save "${node.name}"`
+			return `保存 "${node.name}"`
 		}
 		return "Save"
 	}

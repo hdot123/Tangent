@@ -53,16 +53,16 @@ export class CollapseCurrentSectionCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Toggle Current Selection'
+		return '切换当前选区'
 	}
 
 	getLabel(context?: WorkspaceCommandContext) {
 		const targets = this.getTargets()
 		if (targets && context?.context !== 'main-menu') {
 			if (targets.editor.collapsingSections.lineHasCollapsedChildren(targets.index)) {
-				return 'Expand Current Section'
+				return '展开当前节'
 			}
-			return 'Collapse Current Section'
+			return '折叠当前节'
 		}
 		return this.getName()
 	}
@@ -71,11 +71,11 @@ export class CollapseCurrentSectionCommand extends WorkspaceCommand {
 		const targets = this.getTargets()
 		if (targets && context?.context !== 'main-menu') {
 			if (targets.editor.collapsingSections.lineHasCollapsedChildren(targets.index)) {
-				return 'Expands the current note section, revealing hidden content.'
+				return '展开当前笔记节，显示隐藏内容。'
 			}
-			return 'Collapses the current note section, hiding its contents.'
+			return '折叠当前笔记节，隐藏其内容。'
 		}
-		return 'Toggles the current note section between collapsed & expanded.'
+		return '在折叠和展开之间切换当前笔记节。'
 	}
 }
 
@@ -184,17 +184,17 @@ export class CollapseAllSectionsCommand extends WorkspaceCommand {
 		if (this.scope === 'all') {
 			switch (this.mode) {
 				case 'collapse':
-					return 'Collapse All Sections'
+					return '折叠所有节'
 				case 'expand':
-					return 'Expand All Sections'
+					return '展开所有节'
 			}
 		}
 		else if (this.scope === 'edge') {
 			switch (this.mode) {
 				case 'collapse':
-					return 'Collapse Smallest Sections'
+					return '折叠最小节'
 				case 'expand':
-					return 'Expand Largest Sections'
+					return '展开最大节'
 			} 
 		}
 	}
@@ -203,17 +203,17 @@ export class CollapseAllSectionsCommand extends WorkspaceCommand {
 		if (this.scope === 'all') {
 			switch (this.mode) {
 				case 'collapse':
-					return 'Collapses all sections within the current note, hiding their contents.'
+					return '折叠当前笔记中的所有节，隐藏其内容。'
 				case 'expand':
-					return 'Expands all sections within the current note, revealing their contents.'
+					return '展开当前笔记中的所有节，显示其内容。'
 			}
 		}
 		else if (this.scope === 'edge') {
 			switch (this.mode) {
 				case 'collapse':
-					return 'Collapses the lowest-tier, visible sections of the note.'
+					return '折叠笔记中最低层级的可见节。'
 				case 'expand':
-					return 'Expands the highest-tier, collapsed sections of the note.'
+					return '展开笔记中最高层级的已折叠节。'
 			} 
 		}
 	}

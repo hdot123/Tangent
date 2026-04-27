@@ -89,7 +89,7 @@ ipcMain.on('menus.setMainMenu', (event, template) => {
 		}
 		else if (item.tangentRole === 'checkForUpdates') {
 			delete item.tangentRole
-			item.label = 'Check for Updates...'
+			item.label = '检查更新...'
 			item.click = () => checkForUpdates()
 		}
 		else if (item.type === 'separator') {
@@ -107,20 +107,20 @@ ipcMain.on('menus.setMainMenu', (event, template) => {
 
 	// Inject & tweak mac-specific menus
 	if (isMac && mode === 'development') {
-		const helpIndex = template.findIndex(i => i.label === 'Help')
+		const helpIndex = template.findIndex(i => i.label === '帮助')
 		if (helpIndex >= 0) {
 			template.splice(helpIndex >= 0 ? helpIndex : template.length - 2, 0,
 				{
-					label: 'Dev',
+					label: '开发',
 					submenu: [
 						{
-							label: 'Force Documentation Refresh',
+							label: '强制刷新文档',
 							click() {
 								initDocumentation(true)
 							}
 						},
 						{
-							label: 'Set Window to Screenshot Size',
+							label: '设置窗口为截图尺寸',
 							accelerator: 'CommandOrControl+Alt+S',
 							click(item: MenuItem, browserWindow: BrowserWindow) {
 								const oldBounds = browserWindow.getBounds()
@@ -137,7 +137,7 @@ ipcMain.on('menus.setMainMenu', (event, template) => {
 							}
 						},
 						{
-							label: 'Force Reload',
+							label: '强制重载',
 							accelerator: 'CommandOrControl+R',
 							async click(menuItem, window: BrowserWindow, event) {
 								await window.webContents.session.clearCache()

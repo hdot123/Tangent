@@ -68,7 +68,7 @@ export let noteDetailMode: NoteDetailMode = NoteDetailMode.None
 				<div class="count">{pluralize(children.length, '$$ Children', 'One Child', '')}</div>
 			{:else}
 				<div class="empty">
-					Folder is Empty
+					文件夹为空
 				</div>
 			{/if}
 		</div>

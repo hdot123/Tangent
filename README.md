@@ -1,58 +1,65 @@
-# Tangent
-This is the monorepo for the [Tangent](https://www.tangentnotes.com) project.
+# Tangent 中文社区版
 
-Pre-built binaries can be found [on the downloads page](https://www.tangentnotes.com/Download) and [on Flathub](https://flathub.org/apps/io.github.suchnsuch.Tangent). Pre-release versions are also available on [Flathub Beta](https://docs.flathub.org/docs/for-users/installation#flathub-beta-repository).
+这是 [Tangent](https://www.tangentnotes.com) 的中文社区 fork。
 
-Tangent is a local note writing / personal knowledge management tool. It was heavily inspired by Obsidian, and has drifted in its own direction. It uses `[[Wiki Links]]` and a slightly customized markdown syntax. Notes are fully styled as you write. Markdown syntax is hidden and revealed as needed.
+预编译二进制文件可以在[下载页面](https://www.tangentnotes.com/Download)和 [Flathub](https://flathub.org/apps/io.github.suchnsuch.Tangent) 上找到。
 
-Other key features:
-* An innovative, two-dimensional connected map of your navigation and linking history.
-* "Sliding Panel" UX inspired by [Andy Matuschak's notes](https://notes.andymatuschak.org/About_these_notes).
-* Writing focus mode: highlight your current paragraph, line, or sentence.
-* Customizable note views: view your collections of notes as cards or an infinite, dynamically loaded feed.
-* A custom query language (with autocomplete!) for custom complex searches.
-* Support for embedded images, link previews, pdfs, audio, and video—including YouTube links!
+Tangent 是一款本地笔记写作 / 个人知识管理工具。它深受 Obsidian 的启发，并在自己的方向上不断发展。它使用 `[[维基链接]]` 和略有定制的 Markdown 语法。笔记在编写时即可完整渲染样式，Markdown 语法按需隐藏和显示。
 
-## Modules
-There are multiple modules contained within this repo.
+主要功能：
+* 创新的二维连接地图，展示你的导航和链接历史。
+* "滑动面板"用户体验，灵感来自 [Andy Matuschak 的笔记](https://notes.andymatuschak.org/About_these_notes)。
+* 写作专注模式：高亮当前段落、行或句子。
+* 可自定义的笔记视图：以卡片或无限动态加载的信息流查看笔记集合。
+* 自定义查询语言（带自动补全！）用于复杂的搜索。
+* 支持嵌入图片、链接预览、PDF、音频和视频，包括 YouTube 链接！
 
-### Applications
-The `apps` directory contains modules that produce versions of Tangent and other Tangent-related executables.
-* [tangent-electron](./apps/tangent-electron/README.md) – The electron-based Tangent application.
-* [tangent-website](./apps/tangent-website/README.md) – The source code of [tangentnotes.com](https://www.tangentnotes.com).
-* [tangent-test-workspace-generator](./apps/tangent-test-workspace-generator/README.md) – A simple CLI tool for generating test content.
+## 社区
 
-### Packages
-The `packages` directory contains modules that provide libraries of Tangent-related functionality.
-* [tangent-html-to-markdown](./packages/tangent-html-to-markdown/README.md) – The parser used to convert `text/html` clipboard data to Tangent-specific markdown text.
-* [tangent-query-parser](./packages/tangent-query-parser/README.md) – A parser for the Tangent Query language.
+- 问题反馈：[GitHub Issues](https://github.com/hdot123/Tangent/issues)
+- 讨论交流：欢迎提交 PR 和 Issue
 
-### Lib
-The `lib` directory contains externally-versioned libraries that have been added as a git submodule for various reasons.
-* [typewriter](./lib/typewriter/README.md) – A tangent-specific fork of the [Typewriter](https://github.com/typewriter-editor/typewriter) project.
+## 模块
+
+本仓库包含多个模块。
+
+### 应用程序
+`apps` 目录包含 Tangent 的各个应用程序模块。
+* [tangent-electron](./apps/tangent-electron/README.md) – 基于 Electron 的 Tangent 应用。
+* [tangent-website](./apps/tangent-website/README.md) – [tangentnotes.com](https://www.tangentnotes.com) 的源代码。
+* [tangent-test-workspace-generator](./apps/tangent-test-workspace-generator/README.md) – 用于生成测试内容的简单 CLI 工具。
+
+### 包
+`packages` 目录包含提供 Tangent 相关功能的库模块。
+* [tangent-html-to-markdown](./packages/tangent-html-to-markdown/README.md) – 用于将 `text/html` 剪贴板数据转换为 Tangent 特定 Markdown 文本的解析器。
+* [tangent-query-parser](./packages/tangent-query-parser/README.md) – Tangent 查询语言的解析器。
+
+### 库
+`lib` 目录包含作为 git 子模块添加的外部版本化库。
+* [typewriter](./lib/typewriter/README.md) – [Typewriter](https://github.com/typewriter-editor/typewriter) 项目的 Tangent 特定 fork。
 
 
-## Building Locally
-1. Ensure that all submodules are synced (e.g. `git submodule update`).
-2. Run `npm ci` at the root level of the repository to install all dependencies across the monorepo.
-3. Run `npm run build` at the root level of the repository to build all dependencies.
-4. Run `npm run dev` (or `dev:win` on Windows) in `./apps/tangent-electron` to run tangent in development mode.
+## 本地构建
+1. 确保所有子模块已同步（如 `git submodule update`）。
+2. 在仓库根目录运行 `npm ci` 安装所有依赖。
+3. 在仓库根目录运行 `npm run build` 构建所有依赖。
+4. 在 `./apps/tangent-electron` 中运行 `npm run dev`（Windows 上使用 `dev:win`）以开发模式启动 Tangent。
 
 
-## Reporting Issues
-When creating an issues, be sure to use the appropriate label for the specific module.
+## 报告问题
+创建 Issue 时，请使用合适的标签标记具体模块。
 
-When reporting bugs, please include:
-1. The version of the relevant app / package.
-2. A concise description in the title of the problem.
-	* e.g. "Clicking the New Note button does not create a new note"
-3. A thorough description of the problem in the body of the issue.
-	* The steps required to cause the problem.
-		* For example:
-			1. "Open a blank workspace"
-			2. "Click the New Note button"
-			3. "Notice that a new note is not created"
-	* Include any additional details or context that can help illuminate the issue.
-4. Logs can sometimes be very helpful in sussing out a problem.
-	* In-window logs for Tangent can be found from the developer console. You can open this with `Cmd+Option+I` on Mac or `Ctrl+Shift+I` on Windows and Linux. Attaching a screenshot or the contents of these logs can be useful.
-	* Application logs for Tangent can be found in the relevant log folder on your system. You can invoke the "Show Logs" command from the Command Palette in Tangent (`Cmd/Ctrl+P` to open the palette) to bring you directly to the logs.
+报告 Bug 时，请包含：
+1. 相关应用/包的版本号。
+2. 在标题中简明描述问题。
+   * 例如："点击新建笔记按钮后没有创建新笔记"
+3. 在正文中详细描述问题。
+   * 导致问题发生的步骤。
+      * 例如：
+         1. "打开一个空白工作区"
+         2. "点击新建笔记按钮"
+         3. "发现新笔记没有被创建"
+   * 包含任何有助于说明问题的额外细节或上下文。
+4. 日志有时对排查问题非常有帮助。
+   * Tangent 的窗口内日志可在开发者控制台中找到。可以通过 `Cmd+Option+I`（Mac）或 `Ctrl+Shift+I`（Windows 和 Linux）打开。附上截图或日志内容会很有帮助。
+   * Tangent 的应用日志可在系统的日志文件夹中找到。你可以在 Tangent 中通过命令面板调用"显示日志"命令（`Cmd/Ctrl+P` 打开面板）直接跳转到日志。

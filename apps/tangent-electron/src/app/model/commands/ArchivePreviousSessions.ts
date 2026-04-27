@@ -26,10 +26,10 @@ export default class ArchivePreviousSessionsCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Archive Previous Sessions'
+		return '归档之前的会话'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Hides older sessions from the Map View. Archived sessions are not deleted and can be restored.'
+		return '在地图视图中隐藏较早的会话。已归档的会话不会被删除，可以恢复。'
 	}
 }

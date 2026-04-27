@@ -9,7 +9,7 @@ $: settings = state.settings
 
 <SettingView
 	setting={settings.sorting.sortKey}
-	name="Sort By"
+	name="排序方式"
 	display="inline"
 	form="select"
 	inputClass="arrowNavigate"
@@ -17,7 +17,7 @@ $: settings = state.settings
 />
 <SettingView
 	setting={settings.sorting.sortOrder}
-	name="Order"
+	name="排序方向"
 	display="inline"
 	form="select"
 	inputClass="arrowNavigate"

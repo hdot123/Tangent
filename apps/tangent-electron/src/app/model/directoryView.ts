@@ -47,11 +47,11 @@ export function decodeSortMode(value: string): SortMode {
 function keyDisplayName(key: string) {
 	switch (key) {
 		case 'name':
-			return 'Name'
+			return '名称'
 		case 'created':
-			return 'Date Created'
+			return '创建日期'
 		case 'modified':
-			return 'Date Edited'
+			return '编辑日期'
 	}
 	return ''
 }

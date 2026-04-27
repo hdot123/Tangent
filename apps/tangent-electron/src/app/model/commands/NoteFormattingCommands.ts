@@ -159,27 +159,27 @@ export class ToggleWikiLinkCommand extends NoteEditorCommand {
 
 	getName() {
 		if (this.mode === 'name') {
-			return 'Toggle Wiki Link'
+			return '切换维基链接'
 		}
-		return 'Make Wiki Link From Text'
+		return '从文本创建维基链接'
 	}
 
 	getLabel(context?: ToggleWikiLinkCommandContext) {
 		if (this.mode === 'name') {
-			return 'Wiki Link'
+			return '维基链接'
 		}
-		return 'Wiki Link From Text'
+		return '从文本创建维基链接'
 	}
 
 	getTooltip(context?: ToggleWikiLinkCommandContext) {
 		const checked = this.getChecked(context)
 		if (checked) {
-			return 'Removes the selected wiki link.'
+			return '移除选中的维基链接。'
 		}
 		if (this.mode === 'name') {
-			return 'Creates a wiki link from the selected text.'
+			return '从选中文本创建维基链接。'
 		}
-		return 'Creates a wiki link using the selected text as the display text.'
+		return '使用选中文本作为显示文本创建维基链接。'
 	}
 
 	getDefaultPaletteName() {
@@ -208,18 +208,18 @@ export class ToggleMDLinkCommand extends NoteEditorCommand {
 	}
 
 	getName() {
-		return 'Toggle Markdown Link'
+		return '切换 Markdown 链接'
 	}
 
 	getLabel(context?: NoteEditorCommandContext) {
-		return 'Markdown Link'
+		return 'Markdown 链接'
 	}
 
 	getTooltip(context?: NoteEditorCommandContext) {
 		if (this.getChecked(context)) {
-			return 'Removes the selected markdown link.'
+			return '移除选中的 Markdown 链接。'
 		}
-		return 'Creates a new markdown link from the selection. Injects any links from the clipboard if present.'
+		return '从选区创建新的 Markdown 链接。如果剪贴板中有链接则自动注入。'
 	}
 
 	getDefaultPaletteName() {
@@ -266,7 +266,7 @@ export class NoteLinePrefixCommand extends NoteEditorCommand {
 	}
 
 	getName() {
-		return 'Set ' + this.label
+		return '设为 ' + this.label
 	}
 
 	getLabel(context?: NoteEditorCommandContext) {
@@ -312,9 +312,9 @@ export class ShiftNoteGroupCommand extends NoteEditorCommand {
 
 	getModeLabel() {
 		if (this.mode === 'lines') {
-			return 'Lines'
+			return '行'
 		}
-		return 'Section'
+		return '节'
 	}
 
 	getName() {
@@ -358,10 +358,10 @@ export class SearchNoteCommand extends NoteEditorCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Search Note'
+		return '搜索笔记'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Searches for content within the current note.'
+		return '在当前笔记中搜索内容。'
 	}
 }

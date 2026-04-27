@@ -7,11 +7,11 @@ interface LinkInfo {
 }
 type Link = LinkInfo | string
 const links = [
-	{ link: '/', name: 'Home' },
-	'Download',
-	'Features',
-	'Roadmap',
-	'About'
+	{ link: '/', name: '首页' },
+	'下载',
+	'功能',
+	'路线图',
+	'关于'
 ]
 
 function linkPath(link: Link) {

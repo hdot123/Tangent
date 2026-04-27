@@ -28,12 +28,12 @@ const currentTab = workspace.viewState.leftSidebar.currentTab
 const tabs = [
 	{
 		key: 'files',
-		name: 'Files & Folders',
+		name: '文件与文件夹',
 		icon: 'folder.svg#folder'
 	},
 	{
 		key: 'tags',
-		name: 'Tags',
+		name: '标签',
 		icon: 'tag.svg#tag'
 	}
 ]

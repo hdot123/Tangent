@@ -11,10 +11,10 @@ export default class OpenWorkspaceCommand extends WorkspaceCommand {
 	}
 
 	getLabel(_context) {
-		return 'Open Workspace'
+		return '打开工作区'
 	}
 
 	getTooltip(_context) {
-		return 'Opens a new window that can be opened to any workspace or folder.'
+		return '打开一个新窗口，可以打开任何工作区或文件夹。'
 	}
 }

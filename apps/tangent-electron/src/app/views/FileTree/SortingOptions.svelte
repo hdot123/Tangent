@@ -9,7 +9,7 @@ $: sortFoldersToTop = directoryView.sortFoldersToTop
 
 </script>
 
-<label>Sort By
+<label>排序方式
 	<select bind:value={$currentSortMode}>
 		{#each sortModes as sortMode }
 			<option value={sortMode}>{getSortModeDisplayName(sortMode)}</option>
@@ -19,12 +19,12 @@ $: sortFoldersToTop = directoryView.sortFoldersToTop
 
 <label>
 	<input type="checkbox" bind:checked={$sortFoldersToTop}/>
-	Sort Folders to Top
+	文件夹置顶
 </label>
 
 <label>
 	<input type="checkbox" bind:checked={$sortQueriesToTop}/>
-	Sort Queries to Top
+	查询置顶
 </label>
 
 <style lang="scss">

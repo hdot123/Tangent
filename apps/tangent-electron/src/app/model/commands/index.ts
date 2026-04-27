@@ -60,39 +60,39 @@ function createAllCommands(workspace: Workspace) {
 
 		createNewFile: new CreateNewFileCommand(workspace),
 		createNewNoteFromRule: new ShowCommandPaletteCommand(workspace, {
-			name: 'Create New Note From Rule',
+			name: '从规则创建新笔记',
 			prefix: '> Create ',
-			tooltip: 'Creates a new note using a define Note Creation Rule',
+			tooltip: '使用定义的笔记创建规则创建新笔记',
 			shortcut: 'Mod+Shift+N'
 		}),
 		createNewFolder: new CreateNewFolderCommand(workspace),
 
 		undo: new NativeCommand(workspace, {
-			role: 'undo', label: 'Undo', tooltip: 'Undo the last action.',
+			role: 'undo', label: '撤销', tooltip: '撤销上一步操作。',
 			shortcut: 'Mod+Z'
 		}),
 		redo: new NativeCommand(workspace, {
-			role: 'redo', label: 'Redo', tooltip: 'Redo the last undone action.',
+			role: 'redo', label: '重做', tooltip: '重做上一步撤销的操作。',
 			shortcut: isMac ? 'Mod+Shift+Z' : 'Mod+Y'
 		}),
 		cut: new NativeCommand(workspace, {
-			role: 'cut', label: 'Cut', tooltip: 'Remove the selected content and place it in the system clipboard.',
+			role: 'cut', label: '剪切', tooltip: '移除选中的内容并放入系统剪贴板。',
 			shortcut: 'Mod+X'
 		}),
 		copy: new NativeCommand(workspace, {
-			role: 'copy', label: 'Copy', tooltip: 'Place the selected content in the system clipboard.',
+			role: 'copy', label: '复制', tooltip: '将选中的内容放入系统剪贴板。',
 			shortcut: 'Mod+C'
 		}),
 		paste: new NativeCommand(workspace, {
-			role: 'paste', label: 'Paste', tooltip: 'Insert content from the system clipboard.',
+			role: 'paste', label: '粘贴', tooltip: '插入系统剪贴板中的内容。',
 			shortcut: 'Mod+V'
 		}),
 		pasteAndMatchStyle: new NativeCommand(workspace, {
-			role: 'pasteAndMatchStyle', label: 'Paste Without Formatting', tooltip: 'Insert plain text content from the system clipboard.',
+			role: 'pasteAndMatchStyle', label: '纯文本粘贴', tooltip: '插入系统剪贴板中的纯文本内容。',
 			shortcut: 'Mod+Shift+V'
 		}),
 		selectAll: new NativeCommand(workspace, {
-			role: 'selectAll', label: 'Select All', tooltip: 'Selects all content in the current scole.',
+			role: 'selectAll', label: '全选', tooltip: '选择当前范围内的所有内容。',
 			shortcut: 'Mod+A'
 		}),
 
@@ -229,29 +229,29 @@ function createAllCommands(workspace: Workspace) {
 			shortcut: 'Mod+F'
 		}),
 		toggleBold: new InlineFormatCommand(workspace, {
-			label: 'Bold',
-			tooltip: 'Toggles whether the selected text is bold.',
+			label: '加粗',
+			tooltip: '切换选中文本是否加粗。',
 			shortcut: 'Mod+B',
 			formattingCharacters: () => workspace.settings?.boldCharacters.value ?? '**',
 			attributePredicate: attr => attr?.bold
 		}),
 		toggleItalics: new InlineFormatCommand(workspace, {
-			label: 'Italics',
-			tooltip: 'Toggles whether the selected text is italic.',
+			label: '斜体',
+			tooltip: '切换选中文本是否斜体。',
 			shortcut: 'Mod+I',
 			formattingCharacters: () => workspace.settings?.italicsCharacters.value ?? '_',
 			attributePredicate: attr => attr?.italic
 		}),
 		toggleHighlight: new InlineFormatCommand(workspace, {
-			label: 'Highlight',
-			tooltip: 'Toggles whether the selected text is highlighted.',
+			label: '高亮',
+			tooltip: '切换选中文本是否高亮。',
 			shortcut: 'Mod+=',
 			formattingCharacters: () => '==',
 			attributePredicate: attr => attr?.highlight
 		}),
 		toggleInlineCode: new InlineFormatCommand(workspace, {
-			label: 'Inline Code',
-			tooltip: 'Toggles whether the selected text is rendered as code.',
+			label: '行内代码',
+			tooltip: '切换选中文本是否渲染为代码。',
 			shortcut: 'Mod+\\',
 			formattingCharacters: () => '`',
 			attributePredicate: attr => attr?.inline_code
@@ -270,45 +270,45 @@ function createAllCommands(workspace: Workspace) {
 
 		setHeader1: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+1',
-			label: 'Header 1',
-			tooltip: 'Changes the currently selected line(s) to a 1st level header.',
+			label: '标题 1',
+			tooltip: '将当前选中的行改为 1 级标题。',
 			prefix: '# '
 		}),
 		setHeader2: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+2',
-			label: 'Header 2',
-			tooltip: 'Changes the currently selected line(s) to a 2nd level header.',
+			label: '标题 2',
+			tooltip: '将当前选中的行改为 2 级标题。',
 			prefix: '## '
 		}),
 		setHeader3: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+3',
-			label: 'Header 3',
-			tooltip: 'Changes the currently selected line(s) to a 3rd level header.',
+			label: '标题 3',
+			tooltip: '将当前选中的行改为 3 级标题。',
 			prefix: '### '
 		}),
 		setHeader4: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+4',
-			label: 'Header 4',
-			tooltip: 'Changes the currently selected line(s) to a 4th level header.',
+			label: '标题 4',
+			tooltip: '将当前选中的行改为 4 级标题。',
 			prefix: '#### '
 		}),
 		setHeader5: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+5',
-			label: 'Header 5',
-			tooltip: 'Changes the currently selected line(s) to a 5th level header.',
+			label: '标题 5',
+			tooltip: '将当前选中的行改为 5 级标题。',
 			prefix: '##### '
 		}),
 		setHeader6: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+6',
-			label: 'Header 6',
-			tooltip: 'Changes the currently selected line(s) to a 6th level header.',
+			label: '标题 6',
+			tooltip: '将当前选中的行改为 6 级标题。',
 			prefix: '###### '
 		}),
 
 		setParagraph: new NoteLinePrefixCommand(workspace, {
 			shortcut: 'Mod+0',
-			label: 'Paragraph',
-			tooltip: 'Changes the currently selected line(s) to be paragraphs.',
+			label: '段落',
+			tooltip: '将当前选中的行改为段落。',
 			prefix: ''
 		}),
 

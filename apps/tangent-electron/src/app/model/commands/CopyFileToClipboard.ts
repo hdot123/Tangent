@@ -26,19 +26,19 @@ export class CopyFileToClipboardCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Copy File To Clipboard'
+		return '复制文件到剪贴板'
 	}
 
 	getLabel(context?: CopyFileToClipboardCommandContext) {
 		const file = this.resolveFile(context)
 		if (!file) return this.getName()
-		return `Copy ${getEmbedDisplayname(file.embedType)} to Clipboard`
+		return `复制 ${getEmbedDisplayname(file.embedType)} 到剪贴板`
 	}
 
 	getTooltip(context?: CopyFileToClipboardCommandContext) {
 		const file = this.resolveFile(context)
 		if (!file) return this.getName()
-		return `Copies "${file.name}" to the clipboard`
+		return `将 "${file.name}" 复制到剪贴板`
 	}
 }
 
@@ -59,18 +59,18 @@ export class UpdateFileFromClipboardCommand extends WorkspaceCommand {
 	}
 
 	getName() {
-		return 'Update File from Clipboard'
+		return '从剪贴板更新文件'
 	}
 
 	getLabel(context?: CopyFileToClipboardCommandContext) {
 		const file = this.resolveFile(context)
 		if (!file) return this.getName()
-		return `Update ${getEmbedDisplayname(file.embedType)} from Clipboard`
+		return `从剪贴板更新 ${getEmbedDisplayname(file.embedType)}`
 	}
 
 	getTooltip(context?: CopyFileToClipboardCommandContext) {
 		const file = this.resolveFile(context)
 		if (!file) return this.getName()
-		return `Updates "${file.name}" with the current contents of the clipboard.`
+		return `使用剪贴板当前内容更新 "${file.name}"。`
 	}
 }

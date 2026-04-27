@@ -109,22 +109,22 @@ export default class ZoomCommand extends WorkspaceCommand {
 	getLabel(context: CommandContext) {
 		switch (this.options.direction) {
 			case -1:
-				return 'Zoom Out'
+				return '缩小'
 			case 1:
-				return 'Zoom In'
+				return '放大'
 			case 'reset':
-				return 'Reset Zoom'
+				return '重置缩放'
 		}
 	}
 
 	getTooltip(context: CommandContext) {
 		switch (this.options.direction) {
 			case -1:
-				return 'Contextually zooms out or makes text smaller.'
+				return '根据上下文缩小或减小文字大小。'
 			case 1:
-				return 'Contextually zooms in or makes text bigger.'
+				return '根据上下文放大或增大文字大小。'
 			case 'reset':
-				return 'Resets zoom to the default.'
+				return '将缩放重置为默认值。'
 		}
 	}
 }

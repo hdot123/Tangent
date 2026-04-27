@@ -25,20 +25,25 @@ export enum FocusLevel {
 
 export namespace FocusLevel {
 	export function getShortName(level: FocusLevel) {
-		for (const name of enumKeys(FocusLevel)) {
-			if (FocusLevel[name] === level) {
-				return name
-			}
+		const names: Record<number, string> = {
+			[FocusLevel.Map]: '地图',
+			[FocusLevel.Thread]: '线索',
+			[FocusLevel.File]: '文件',
+			[FocusLevel.Typewriter]: '打字机',
+			[FocusLevel.Paragraph]: '段落',
+			[FocusLevel.Line]: '行',
+			[FocusLevel.Sentence]: '句子',
 		}
+		return names[level] ?? String(level)
 	}
 
 	export function getFullName(level: FocusLevel, capitalized=true) {
 		let result = getShortName(level)
 		if (level >= FocusLevel.File) {
-			result += capitalized ? ' Focus Mode' : ' focus mode'
+			result += capitalized ? ' 专注模式' : ' 专注模式'
 		}
 		else {
-			result += capitalized ? ' View' : ' view'
+			result += capitalized ? ' 视图' : ' 视图'
 		}
 		return result
 	}
@@ -55,15 +60,15 @@ export namespace FocusLevel {
 	export function describeFocusLevel(level: FocusLevel) {
 		switch (level) {
 			case FocusLevel.File:
-				return `Hides all other files except for the selected file.`
+				return `隐藏除选中文件外的所有其他文件。`
 			case FocusLevel.Typewriter:
-				return `Hides all other files and centers the cursor vertically as you type.`
+				return `隐藏所有其他文件，并在打字时将光标垂直居中。`
 			case FocusLevel.Paragraph:
-				return `Hides all other files and highlights the current paragraph block.`
+				return `隐藏所有其他文件，并高亮当前段落块。`
 			case FocusLevel.Line:
-				return 'Hides all other files and highlights the current line.'
+				return '隐藏所有其他文件，并高亮当前行。'
 			case FocusLevel.Sentence:
-				return `Hides all other files and highlights the current sentence.`
+				return `隐藏所有其他文件，并高亮当前句子。`
 		}
 	}
 }

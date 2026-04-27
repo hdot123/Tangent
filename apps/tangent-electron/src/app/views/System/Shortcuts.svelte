@@ -155,7 +155,7 @@ function resetToDefault(key: string) {
 </script>
 
 <main>
-	<nav><input type="search" bind:value={filter} placeholder="Search" /></nav>
+	<nav><input type="search" bind:value={filter} placeholder="搜索" /></nav>
 	<details>
 		<summary>Advanced</summary>
 		<SettingView setting={workspace.settings.useKeyCodeShortcuts} />
@@ -190,20 +190,20 @@ function resetToDefault(key: string) {
 								<div class="bindingRow">
 									<button
 										on:click={() => startEditing(item, index) }
-										use:tooltip={"Click to set binding"}
+										use:tooltip={"点击设置绑定"}
 									>
 										{shortcutDisplayString(shortcut)}
 									</button>
 									<button class="action remove subtle"
 										on:click={() => removeBinding(item, index)}
-										use:tooltip={"Remove this binding"}
+										use:tooltip={"移除此绑定"}
 									>
 										<SVGIcon size={16} ref="close.svg#close" />
 									</button>
 									{#if index === shortcuts.length - 1}
 										<button class="action add subtle"
 											on:click={() => startEditing(item, index + 1)}
-											use:tooltip={"Add a new binding"}
+											use:tooltip={"添加新绑定"}
 										>
 											<SVGIcon size={16} ref="plus.svg#plus" />
 										</button>
@@ -223,7 +223,7 @@ function resetToDefault(key: string) {
 							<div class="bindingRow">
 								<button class="action add subtle"
 									on:click={() => startEditing(item, 0)}
-									use:tooltip={"Add a new binding"}
+									use:tooltip={"添加新绑定"}
 								>
 									<SVGIcon size={16} ref="plus.svg#plus" />
 								</button>
@@ -234,7 +234,7 @@ function resetToDefault(key: string) {
 						<button class="subtle"
 							class:hidden={deepEqual(item.command.shortcuts, item.command.defaultShortcuts)}
 							on:click={() => resetToDefault(item.key)}
-							use:tooltip={"Reset to default bindings"}
+							use:tooltip={"重置为默认绑定"}
 						>
 							<SVGIcon size={16} ref="reset.svg#arc" />
 						</button>

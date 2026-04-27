@@ -92,10 +92,10 @@ export default class CreateNewFolderCommand extends WorkspaceCommand {
 	}
 
 	getLabel(content: CreateNewFolderCommandContext) {
-		return 'Create New Folder'
+		return '创建新文件夹'
 	}
 
 	getTooltip(context: CreateNewFolderCommandContext) {
-		return 'Creates a new folder.'
+		return '创建一个新文件夹。'
 	}
 }

@@ -12,7 +12,7 @@ let {
 
 let children = $derived(queryViewState.nodes)
 let stats = $derived.by(() => {
-	return pluralize($children.length, 'Found $$ Items', 'Found One Item', 'Found Nothing')
+	return pluralize($children.length, '找到 $$ 项', '找到 1 项', '未找到结果')
 })
 
 </script>

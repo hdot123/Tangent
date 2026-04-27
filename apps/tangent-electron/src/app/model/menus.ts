@@ -192,19 +192,19 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 	}
 	
 	template.push({
-		label: 'File',
+		label: '文件',
 		submenu: [
 			{ command: cmds.createNewFile },
 			{
-				label: 'Create New Note From Rule',
+				label: '从规则创建新笔记',
 				command: cmds.createNewNoteFromRule
 			},
 			{
-				label: 'Save',
+				label: '保存',
 				command: cmds.saveCurrentFile
 			},
 			{
-				label: 'Duplicate',
+				label: '复制',
 				command: cmds.duplicateNode
 			},
 			{ type: 'separator' },
@@ -228,7 +228,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 		{ command: cmds.selectAll },
 		{ type: 'separator' },
 		{
-			label: 'Formatting',
+			label: '格式',
 			submenu: [
 				{ command: cmds.toggleBold },
 				{ command: cmds.toggleItalics },
@@ -245,7 +245,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 			]
 		},
 		{
-			label: 'Links',
+			label: '链接',
 			submenu: [
 				{ command: cmds.toggleWikiLink },
 				{ command: cmds.toggleMDLink }
@@ -272,11 +272,11 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 
 	template.push(
 		{
-			label: 'Edit',
+			label: '编辑',
 			submenu: editMenu
 		},
 		{
-			label: 'View',
+			label: '视图',
 			submenu: [
 				{
 					command: cmds.setMapFocusLevel
@@ -285,23 +285,23 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 					command: cmds.setThreadFocusLevel
 				},
 				{
-					label: 'Toggle Focus',
+					label: '切换专注',
 					command: cmds.toggleFocusMode
 				},
 				{
-					label: '    File',
+					label: '    文件',
 					command: cmds.setFileFocusLevel
 				},
 				{
-					label: '    Typewriter',
+					label: '    打字机',
 					command: cmds.setTypewriterFocusLevel
 				},
 				{
-					label: '    Paragraph',
+					label: '    段落',
 					command: cmds.setParagraphFocusLevel
 				},
 				{
-					label: '    Sentence',
+					label: '    句子',
 					command: cmds.setSentenceFocusLevel
 				},
 				{ command: cmds.openDetails },
@@ -313,7 +313,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 				{ command: cmds.expandLargestSections },
 				{ type: 'separator' },
 				{
-					label: 'Show Left Sidebar',
+					label: '显示左侧边栏',
 					command: cmds.toggleLeftSidebar,
 				},
 				{ type: 'separator' },
@@ -326,10 +326,10 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 			]
 		},
 		{
-			label: 'Go',
+			label: '导航',
 			submenu: [
-				{ command: cmds.shiftHistoryBack, label: 'Go Back' },
-				{ command: cmds.shiftHistoryForward, label: 'Go Forward' },
+				{ command: cmds.shiftHistoryBack, label: '后退' },
+				{ command: cmds.shiftHistoryForward, label: '前进' },
 				{ type: 'separator' },
 				{ command: cmds.goTo },
 				{ command: cmds.openQueryPane },
@@ -341,7 +341,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 	)
 
 	const doMenu: MenuItemConstructorOptions = {
-		label: 'Do',
+		label: '操作',
 		submenu: [
 			{ command: cmds.do }
 		]
@@ -349,7 +349,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 
 	if (isMac) {
 		doMenu.submenu.push({
-			label: 'Speech',
+			label: '语音',
 			submenu: [
 				{ role: 'startSpeaking' },
 				{ role: 'stopSpeaking' }
@@ -364,7 +364,7 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 	}
 
 	template.push({
-		label: 'Help',
+		label: '帮助',
 		role: 'help',
 		submenu: [
 			{ command: cmds.openDocumenation },
@@ -380,11 +380,11 @@ export function buildMainMenu(workspace: Workspace): MenuItemConstructorOptions[
 			},
 			{ type: 'separator' },
 			{
-				label: 'Tangent on Discord',
+				label: 'Tangent Discord 社区',
 				link: 'https://discord.gg/6VpvhUnxFe'
 			},
 			{
-				label: 'Tangent on Mastodon',
+				label: 'Tangent Mastodon',
 				link: 'https://mastodon.social/@tangentnotes'
 			},
 			{ type: 'separator' },

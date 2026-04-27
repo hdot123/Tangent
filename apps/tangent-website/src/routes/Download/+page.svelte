@@ -66,14 +66,14 @@ function osNameShim(osName: string) {
 </script>
 
 <article>
-	<h1>Join the Open Alpha</h1>
+	<h1>加入公开测试</h1>
 	<p>
-		Tangent is being developed out in the open on <a href="https://github.com/suchnsuch/Tangent" target="_blank">Github</a>.
-		The app is open source and will always be free!
-		Come in and join the fun!
+		Tangent 在 <a href="https://github.com/hdot123/Tangent" target="_blank">Github</a> 上公开开发。
+		应用开源且永久免费！
+		来加入我们吧！
 	</p>
 	{#await buildFetchProcess}
-		<p class="checking-latest">Checking latest build…</p>
+		<p class="checking-latest">检查最新构建…</p>
 	{:then result}
 		{@const { builds, highlightChoice, altChoices } = result}
 		{#if highlightChoice}
@@ -81,17 +81,17 @@ function osNameShim(osName: string) {
 				<a class={highlightChoice.os} href={highlightChoice.path}>
 					<span class="icon"></span>
 					<span class="version">
-						Download
+						下载
 						v{highlightChoice.version}
-						for {highlightChoice.displayName}
+						适用于 {highlightChoice.displayName}
 					</span>
-					<span class="date">Released {releaseDate(highlightChoice.releaseDate)}</span>
+					<span class="date">发布于 {releaseDate(highlightChoice.releaseDate)}</span>
 				</a>
 			</p>
 
 			{#if altChoices.length}
 				<p class="links">
-					Or, download for:
+					或下载其他平台版本：
 					{#each altChoices as choice}
 						{#if choice} <!--TODO: Remove once portables are standard-->
 						<a href={choice.path}>{@html osNameShim(choice.displayName)}</a>
@@ -102,47 +102,46 @@ function osNameShim(osName: string) {
 		{/if}
 
 		<p>
-			Tangent is also available
-			<a target="_blank" rel="noopener" href="https://flathub.org/apps/io.github.suchnsuch.Tangent">on Flathub</a>.
+			Tangent 也可在
+			<a target="_blank" rel="noopener" href="https://flathub.org/apps/io.github.suchnsuch.Tangent">Flathub</a> 上获取。
 		</p>
 			
 		<p>
-			If you encounter bugs, or if you think of a feature that you wish Tangent had, reach out in your favorite way:
+			如果你遇到 Bug，或想到希望 Tangent 拥有的功能，可以通过以下方式联系我们：
 		</p>
 
 		<ul>
-			<li>Open an issue on <a href="https://github.com/suchnsuch/Tangent/issues" target="_blank">Github</a>.</li>
-			<li>Post to the community on <a href="https://discord.gg/6VpvhUnxFe" target="_blank">Discord</a>.</li>
-			<li>Toot at the project on <a href="https://mastodon.social/@tangentnotes" target="_blank">Mastodon</a>.</li>
+			<li>在 <a href="https://github.com/hdot123/Tangent/issues" target="_blank">Github</a> 上提交 Issue。</li>
+			<li>在 <a href="https://discord.gg/6VpvhUnxFe" target="_blank">Discord</a> 社区发帖。</li>
+			<li>在 <a href="https://mastodon.social/@tangentnotes" target="_blank">Mastodon</a> 上关注项目。</li>
 		</ul>
 
-		<p>Any which way, we'll do our best to help you out.</p>
+		<p>无论哪种方式，我们都会尽力帮助你。</p>
 	
 		{#if builds.beta || builds.alpha}
-			<h1>Development Builds</h1>
+			<h1>开发版构建</h1>
 		{/if}
 		{#if builds.beta}
-			<h2>Beta – Release Preview</h2>
+			<h2>Beta - 发布预览</h2>
 			<DownloadList build={builds.beta}/>
 			<p>
-				Beta builds are preview releases for upcoming stable versions.
-				They are intended to be stable, but may still contain bugs.
+				Beta 构建是即将发布的稳定版的预览版本。
+				它们旨在保持稳定，但仍可能包含 Bug。
 			</p>
 		{/if}
 		{#if builds.alpha}
-			<h2>Alpha – The Bleeding Edge</h2>
+			<h2>Alpha - 前沿版本</h2>
 			<DownloadList build={builds.alpha}/>
 			<p>
-				Alpha builds let you get access to the
-				<a href="/Roadmap">upcoming features</a>
-				as quickly as possible.
-				These versions will have the most instability and bugs;
-				however, feedback on these versions will have the most impact!
+				Alpha 构建让你尽快体验
+				<a href="/路线图">即将推出的功能</a>。
+				这些版本的稳定性和 Bug 最多；
+				但对这些版本的反馈将产生最大的影响！
 			</p>
 		{/if}
 
 		{#if builds.legacy}
-			<h1>Tangent Legacy</h1>
+			<h1>Tangent 传统版</h1>
 			<p>
 				For those of you remaining on MacOS Catalina (10.15.x), Tangent Legacy looks to offer as close to the same experience as the mainline Tangent builds,
 				but running on a compatible Electron version
@@ -150,11 +149,11 @@ function osNameShim(osName: string) {
 			</p>
 			<DownloadList build={builds.legacy}/>
 			<p>
-				This legacy version of Tangent will follow the stable releases at a reasonable cadance and won't auto-upgrade into an incompatible version.
+				此传统版 Tangent 将以合理的节奏跟进稳定版发布，不会自动升级到不兼容的版本。
 			</p>
 		{/if}
 	{:catch}
-		<p class="fetch-error">Something went wrong. Builds could not be fetched. Please reload the page to try again.</p>
+		<p class="fetch-error">出错了。无法获取构建信息。请刷新页面重试。</p>
 	{/await}
 </article>
 

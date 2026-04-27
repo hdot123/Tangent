@@ -26,10 +26,10 @@ export default class OpenPreferencesCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context: CommandContext) {
-		return 'Open Preferences'
+		return '打开偏好设置'
 	}
 
 	getTooltip(context: CommandContext) {
-		return 'Opens the preference pane, allowing customization of settings.'
+		return '打开偏好设置面板，可自定义各项设置。'
 	}
 }

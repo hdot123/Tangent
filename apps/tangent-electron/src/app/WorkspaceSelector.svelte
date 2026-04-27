@@ -73,11 +73,11 @@ function openDocumentation() {
 						<PopUpButton name="…" placement="right" menuMode="low-profile">
 							<div class="workspaceMenu buttonGroup vertical">
 								<button
-									use:tooltip={"Reveal this workspace in the file browser."}
+									use:tooltip={"在文件浏览器中显示此工作区。"}
 									onclick={() => api.file.showInFileBrowser(workspace)}
 									>Show Workspace</button>
 								<button
-									use:tooltip={"Remove this workspace from this list"}
+									use:tooltip={"从列表中移除此工作区"}
 									onclick={() => forgetWorkspace(workspace)}
 								>Forget Workspace</button>
 							</div>
@@ -89,7 +89,7 @@ function openDocumentation() {
 			<h1>Welcome To Tangent</h1>
 			<p>
 				<em>Tangent</em> is designed to work on many files within a folder.
-				This folder is called a "workspace."
+				此文件夹称为"工作区"。
 				Think of a workspace as a big bucket of all of your thoughts.
 			</p>
 			<p>

@@ -14,7 +14,7 @@ interface $$Slots {
 
 export let text: string
 export let placeholderMode: 'always' | 'hideWithText' = 'hideWithText'
-export let placeholder: string = 'Type to select...'
+export let placeholder: string = '输入以选择...'
 
 export let options: T[] = []
 export let selectedIndex = 0

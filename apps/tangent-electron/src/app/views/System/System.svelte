@@ -33,7 +33,7 @@ $: onModeChanged($mode)
 function onModeChanged(_m?) {
 	if ($mode === 'ready' && !suppressUpdates && !detailsOpen && workspace.viewState.modal.stack.length == 0) {
 		detailsOpen = true
-		section.set('Updates')
+		section.set('更新')
 	}
 }
 
@@ -42,47 +42,47 @@ $: downloadPercent = $downloadProgress?.percent || 0
 // Sub-menus
 const menus = [
 	{
-		name: 'Appearance',
+		name: '外观',
 		component: Appearance
 	},
 	{
-		name: 'Attachments',
+		name: '附件',
 		component: Attachments
 	},
 	{
-		name: 'Creation Rules',
+		name: '创建规则',
 		component: CreationRules
 	},
 	{
-		name: 'Database',
+		name: '数据库',
 		component: Database
 	},
 	{
-		name: 'Maps',
+		name: '地图',
 		component: Maps
 	},
 	{
-		name: 'Notes',
+		name: '笔记',
 		component: Notes
 	},
 	{
-		name: 'Shortcuts',
+		name: '快捷键',
 		component: Shortcuts
 	},
 	{
-		name: 'Custom Styles',
+		name: '自定义样式',
 		component: Styles
 	},
 	{
-		name: 'Dictionary',
+		name: '词典',
 		component: Dictionary
 	},
 	{
-		name: 'Updates',
+		name: '更新',
 		component: Updates
 	},
 	{
-		name: 'About',
+		name: '关于',
 		component: About,
 		documentation: false
 	}
@@ -90,7 +90,7 @@ const menus = [
 
 if (workspace.isPreviewBuild() || workspace.settings.updateChannel.value !== 'latest') {
 	menus.push({
-		name: 'Debug',
+		name: '调试',
 		component: Debug
 	})
 }
@@ -102,7 +102,7 @@ $: currentMenu = menus.find(m => m.name === $section) ?? menus[0]
 	bind:showMenu={detailsOpen}
 	menuMode="low-profile"
 	tooltip={{
-		tooltip: "Open settings",
+		tooltip: "打开设置",
 		shortcut: isMac ? '⌘ ,' : 'Ctrl+,'
 	}}
 >

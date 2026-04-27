@@ -53,7 +53,7 @@ export function sortNodes(nodes: TreeNodeOrReference[], sort: SortMode, store?: 
 }
 
 const sortKeyDefinition: SettingDefinition<string> = {
-	name: 'Sort Key',
+	name: '排序依据',
 	description: 'Determines what value to sort by.',
 	validValues: [
 		{
@@ -75,7 +75,7 @@ const sortKeyDefinition: SettingDefinition<string> = {
 }
 
 const sortOrderDefinition: SettingDefinition<SortOrder> = {
-	name: 'Sort Order',
+	name: '排序方向',
 	description: 'Determines what order the value is sorted by.',
 	validValues: [
 		{

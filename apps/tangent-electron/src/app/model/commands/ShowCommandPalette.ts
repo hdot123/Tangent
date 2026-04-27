@@ -49,13 +49,13 @@ export default class ShowCommandPaletteCommand extends WorkspaceCommand {
 
 		const prefix = context?.prefix ?? this.prefix
 		if (!prefix) {
-			return 'Open File'
+			return '打开文件'
 		}
 		if (prefix.match(/^> ?$/)) {
-			return 'Open Command Palette'
+			return '打开命令面板'
 		}
 		if (prefix.match(/^\? ?$/)) {
-			return 'Search Files'
+			return '搜索文件'
 		}
 	}
 
@@ -64,13 +64,13 @@ export default class ShowCommandPaletteCommand extends WorkspaceCommand {
 
 		const prefix = context?.prefix ?? this.prefix
 		if (!prefix) {
-			return 'Open a search box for all files.'
+			return '打开搜索框，搜索所有文件。'
 		}
 		if (prefix.match(/^> ?$/)) {
-			return 'Open a search box for all commands.'
+			return '打开搜索框，搜索所有命令。'
 		}
 		if (prefix.match(/^\? ?$/)) {
-			return 'Open a search box for the names and content of all files.'
+			return '打开搜索框，搜索所有文件的名称和内容。'
 		}
 	}
 

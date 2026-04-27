@@ -53,28 +53,28 @@ export function willPromptForName(template: string) {
 }
 
 const contentTemplateDefinition: SettingDefinition<string> = {
-	name: 'Content Template',
+	name: '内容模板',
 	description: 'The markdown template file that seeds the initial content of a file.',
 	defaultValue: '',
 	form: 'file' // In the future, could be a tangent-integrated file search
 }
 
 const shortcutDefinition: SettingDefinition<string> = {
-	name: 'Shortcut',
+	name: '快捷键',
 	description: 'If set, this shortcut will invoke this creation rule.',
 	defaultValue: '',
 	form: 'shortcut'
 }
 
 const folderStoreDefinition: SettingDefinition<string> = {
-	name: 'Parent Folder',
+	name: '父文件夹',
 	description: 'The folder in which the note will be created.',
 	defaultValue: '',
 	form: 'folder'
 }
 
 const creationModeDefinition: SettingDefinition<CreationMode> = {
-	name: 'Creation Mode',
+	name: '创建模式',
 	description: 'Determines how the new note is created.',
 	validValues: [
 		{
@@ -91,7 +91,7 @@ const creationModeDefinition: SettingDefinition<CreationMode> = {
 }
 
 const descriptionDefinition: SettingDefinition<string> = {
-	name: 'Description',
+	name: '描述',
 	description: 'An overview of the rule so that you don\'t forget.',
 	defaultValue: '',
 	form: 'textarea',
@@ -99,13 +99,13 @@ const descriptionDefinition: SettingDefinition<string> = {
 }
 
 const showInMenuDefinition: SettingDefinition<boolean> = {
-	name: 'Show In Menu',
-	description: 'If checked, this rule will show up in the "Create New Note" pop-up button.',
+	name: '在菜单中显示',
+	description: '勾选后，此规则将显示在"新建笔记"弹出按钮中。',
 	defaultValue: true
 }
 
 const openInContextDefinition: SettingDefinition<string> = {
-	name: 'Open With',
+	name: '打开方式',
 	description: 'If set, new notes created by this rule will be opened in the context of the selected folder or note.',
 	defaultValue: '',
 	form: 'path',

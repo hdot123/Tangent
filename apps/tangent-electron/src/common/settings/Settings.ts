@@ -9,7 +9,7 @@ import { isLinux, isMac } from '../platform'
  * This malarky is done so that Mac, which _does_ properly support those cursors, gets the benefit and Windows doesn't look broken.
  */
 const linkCursorDefinition: SettingDefinition<string> = {
-	name: 'Link Cursor',
+	name: '链接光标',
 	description: 'The appearance of the mouse cursor when interacting with links in notes.',
 	validValues: [
 		{
@@ -51,7 +51,7 @@ class KeymapSettings extends PatchableMap<string, string[], string[]> {
 
 export default class Settings extends ObjectStore {
 	updateChannel = new Setting<string>({
-		name: 'Update Channel',
+		name: '更新频道',
 		description: 'Controls what versions Tangent will automatically update to.',
 		validValues: [
 			{
@@ -77,18 +77,18 @@ export default class Settings extends ObjectStore {
 	})
 
 	automaticallyCheckForUpdates = new Setting<boolean>({
-		name: 'Automatically Check for Updates',
+		name: '自动检查更新',
 		description: 'When enabled, Tangent will automatically check for updates.',
 		defaultValue: true
 	})
 
 	showChangelogOnUpdate = new Setting<boolean>({
-		name: 'Show Changelog when Tangent Updates',
+		name: 'Tangent 更新时显示更新日志',
 		defaultValue: true
 	})
 
 	appearance = new Setting<string>({
-		name: 'Appearance',
+		name: '外观',
 		description: 'Controls whether Tangent displays in light or dark mode.',
 		validValues: [
 			{
@@ -110,7 +110,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	titlebar = new Setting<string>({
-		name: 'Titlebar',
+		name: '标题栏',
 		description: 'Controsl the appearance of the titlebars of Tangent\'s windows. (Requires restart.)',
 		validValues: [
 			{
@@ -128,7 +128,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	accentHue = new Setting<number>({
-		name: 'Accent Hue',
+		name: '主题色相',
 		description: 'The hue of Tangent\'s button and link color.',
 		defaultValue: 141,
 		range: {
@@ -139,7 +139,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	accentSaturation = new Setting<number>({
-		name: 'Accent Saturation',
+		name: '主题饱和度',
 		description: 'The saturation of Tangent\s button and link color.',
 		defaultValue: 67,
 		range: {
@@ -150,7 +150,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	uiFontSize = new Setting<number>({
-		name: 'UI Font Size',
+		name: '界面字体大小',
 		description: 'Controls the size of text in the UI.',
 		defaultValue: 16,
 		range: {
@@ -161,7 +161,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	panelWidthMin = new Setting<number>({
-		name: 'Min Panel Width',
+		name: '最小面板宽度',
 		description: 'Determines the minimum width of a panel.',
 		defaultValue: 625,
 		range: {
@@ -172,7 +172,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	scrollBarWidth = new Setting<string>({
-		name: 'Scroll Bar Width',
+		name: '滚动条宽度',
 		description: 'Determines the thickness of scroll bar handles.',
 		validValues: [
 			{
@@ -188,7 +188,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	sidebarHoverHotspot = new Setting<number>({
-		name: 'Sidebar Hotspot',
+		name: '侧边栏热区',
 		description: 'How close to the edge your mouse must be (in pixels) to reveal a collapsed sidebar.',
 		defaultValue: 12,
 		range: {
@@ -199,7 +199,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	panelSettingsHoverHotspot = new Setting<number>({
-		name: 'Panel Settings Hotspot',
+		name: '面板设置热区',
 		description: 'How close to the top of a panel your must be (in pixels) to reveal the panel\'s settings pane.',
 		defaultValue: 20,
 		range: {
@@ -210,14 +210,14 @@ export default class Settings extends ObjectStore {
 	})
 
 	showPromptInstructions = new Setting<boolean>({
-		name: 'Show Prompt Instructions',
+		name: '显示提示说明',
 		description: 'When enabled, command palettes and autocomplete menus display relevant shortcuts.',
 		defaultValue: true
 	})
 
 	// Navigation
 	linkClickPaneBehavior = new Setting<string>({
-		name: 'Links & Panes',
+		name: '链接与面板',
 		description: 'How opening a link affects currently open panes in the thread.',
 		validValues: [
 			{
@@ -235,7 +235,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	noteLinkFollowBehavior = new Setting<string>({
-		name: 'Link Following',
+		name: '链接跳转',
 		description: 'What keys need to be pressed when left clicking on a link to follow it.',
 		validValues: [
 			{
@@ -258,7 +258,7 @@ export default class Settings extends ObjectStore {
 
 	// Map
 	mapZoomScrollMode = new Setting<string>({
-		name: 'Zoom & Pan',
+		name: '缩放与平移',
 		description: 'Determines how the map zooms and pans. Panning is always possible by clicking & dragging.',
 		validValues: [
 			{
@@ -277,7 +277,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	mapZoomSensitivity = new Setting<number>({
-		name: 'Zoom Sensitivity',
+		name: '缩放灵敏度',
 		description: 'Affects how quickly the map zooms in response to input',
 		defaultValue: .25,
 		range: {
@@ -288,33 +288,33 @@ export default class Settings extends ObjectStore {
 	})
 
 	openMapWhenThreadEmptied = new Setting<boolean>({
-		name: 'Open Map When Last File Closed',
+		name: '关闭最后一个文件时打开地图',
 		description: 'When the last file in a thread is closed, open the map.',
 		defaultValue: true
 	})
 
 	showPreviousThreadsOnMap = new Setting<boolean>({
-		name: 'Show Previous Threads',
+		name: '显示之前的线索',
 		description: 'When active, previous threads will be visible on the map, allowing for quick switching.',
 		defaultValue: true
 	})
 
 	showIconsOnMapNodes = new Setting<boolean>({
-		name: 'Show Node Icons',
+		name: '显示节点图标',
 		description: 'When active, map nodes will show icons depicting their file type.',
 		defaultValue: true
 	})
 
 	// Sets
 	cardViewCardsHoldAltToScroll = new Setting<boolean>({
-		name: 'Cards Scroll With Alt',
+		name: '卡片使用 Alt 滚动',
 		description: 'When enabled, the content of cards in a card lens will not scroll unless you hold alt. When disabled, cards will always be scrollable',
 		defaultValue: true
 	})
 
 	// Notes
 	noteMargins = new Setting<string>({
-		name: 'Margins',
+		name: '边距',
 		description: 'Determines how much space is given around notes and note elements.',
 		defaultValue: 'normal',
 		validValues: [
@@ -337,46 +337,46 @@ export default class Settings extends ObjectStore {
 	})
 
 	noteFont = new Setting<string>({
-		name: 'Note Font',
+		name: '笔记字体',
 		description: 'The font used in notes.',
 		form: 'select',
 		defaultValue: ''
 	})
 
 	noteCodeFont = new Setting<string>({
-		name: 'Code Font',
+		name: '代码字体',
 		description: 'The font used in notes for code.',
 		form: 'select',
 		defaultValue: ''
 	})
 
 	noteCodeInlineLightTheme = new Setting<string>({
-		name: 'Light Inline Code',
+		name: '浅色行内代码',
 		description: 'The code theme used for code integrated with other text while in light mode.',
 		form: 'select',
 		defaultValue: 'vscode-light'
 	})
 	noteCodeInlineDarkTheme = new Setting<string>({
-		name: 'Dark Inline Code',
+		name: '深色行内代码',
 		description: 'The code theme used for code integrated with other text while in dark mode.',
 		form: 'select',
 		defaultValue: 'vscode-dark'
 	})
 	noteCodeBlockLightTheme = new Setting<string>({
-		name: 'Light Block Code',
+		name: '浅色代码块',
 		description: 'The code theme used for code in its own block while in light mode.',
 		form: 'select',
 		defaultValue: 'vscode-light'
 	})
 	noteCodeBlockDarkTheme = new Setting<string>({
-		name: 'Dark Block Code',
+		name: '深色代码块',
 		description: 'The code theme used for code in its own block while in dark mode.',
 		form: 'select',
 		defaultValue: 'vscode-dark'
 	})
 
 	noteWidthMax = new Setting<number>({
-		name: 'Max Note Width',
+		name: '最大笔记宽度',
 		description: 'Determines the maximum width of a note.',
 		defaultValue: 700,
 		range: {
@@ -388,7 +388,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	noteFontSize = new Setting<number>({
-		name: 'Note Font Size',
+		name: '笔记字体大小',
 		description: 'Controls the size of text in notes.',
 		defaultValue: 16,
 		range: {
@@ -399,7 +399,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	lineHeight = new Setting<number>({
-		name: 'Line Height',
+		name: '行高',
 		description: 'The spacing between lines of text in notes.',
 		defaultValue: 1.5,
 		range: {
@@ -409,19 +409,19 @@ export default class Settings extends ObjectStore {
 	})
 
 	fixedTitle = new Setting<boolean>({
-		name: 'Floating Title',
+		name: '浮动标题',
 		description: 'If enabled, the title of notes will stay at the top of the note while the note scrolls.',
 		defaultValue: false
 	})
 
 	hangingHeaders = new Setting<boolean>({
-		name: 'Hanging Headers',
+		name: '悬挂式标题',
 		description: 'If enabled, headers will start a bit to the left of other lines.',
 		defaultValue: true
 	})
 
 	crossOutFinishedTodos = new Setting<boolean>({
-		name: 'Cross Out Finished Todos',
+		name: '划掉已完成的待办',
 		description: 'If enabled, completed todos will be crossed or scribbled out.',
 		defaultValue: true
 	})
@@ -430,7 +430,7 @@ export default class Settings extends ObjectStore {
 
 	// Attachments
 	defaultPasteLocation = new Setting<string>({
-		name: 'Pasted Image Folder',
+		name: '粘贴图片文件夹',
 		description: 'The folder images pasted from the clipboard will be saved.',
 		defaultValue: '',
 		form: 'folder'
@@ -438,7 +438,7 @@ export default class Settings extends ObjectStore {
 
 	// Files
 	dirtyIndicatorVisibility = new Setting<string>({
-		name: 'Show Dirty File Indicators',
+		name: '显示未保存文件指示',
 		description: 'Whether to show an indicator that a file is not yet saved.',
 		validValues: [
 			{
@@ -466,7 +466,7 @@ export default class Settings extends ObjectStore {
 	
 	// Links
 	linkAutocompleteForm = new Setting<'short' | 'full'>({
-		name: 'Link Autocomplete',
+		name: '链接自动补全',
 		description: 'How wikilinks will autocomplete',
 		defaultValue: 'short',
 		validValues: [
@@ -484,20 +484,20 @@ export default class Settings extends ObjectStore {
 	})
 
 	areLinksCaseSensitive = new Setting<boolean>({
-		name: 'Case Sensitive Links',
+		name: '区分大小写链接',
 		description: 'Whether the casing of wiki links must match the casing of note names for a link to resolve.',
 		defaultValue: false
 	})
 
 	rawLinksAutoEmbed = new Setting<boolean>({
-		name: 'Auto Embed Raw Links',
+		name: '自动嵌入原始链接',
 		description: 'When on, raw links on their own line are automatically treated as embed links. (Requires restart.)',
 		defaultValue: true
 	})
 
 	// Writing
 	italicsCharacters = new Setting<string>({
-		name: 'Default Italics Characters',
+		name: '默认斜体字符',
 		description: 'The characters used to italicize text via shortcut.',
 		validValues: [
 			{
@@ -512,7 +512,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	boldCharacters = new Setting<string>({
-		name: 'Default Bold Characters',
+		name: '默认加粗字符',
 		description: 'The characters used to embolden text via shortcut.',
 		validValues: [
 			{
@@ -528,31 +528,31 @@ export default class Settings extends ObjectStore {
 	})
 
 	allowInterTextUnderscoreFormatting = new Setting<boolean>({
-		name: 'Inter-Text Underscore Emphasis',
+		name: '文本内下划线强调',
 		description: 'Whether or not you can use "_" characters to apply emphasis within a word, e.g. em_pha_sis.',
 		defaultValue: false
 	})
 
 	smartParagraphBreaks = new Setting<boolean>({
-		name: 'Smart Paragraph Breaks',
+		name: '智能段落换行',
 		description: 'When enabled, pressing Enter in a paragraph will insert an extra blank line, ensuring correct markdown behavior.',
 		defaultValue: false
 	})
 
 	autoSetChildListGlyphs = new Setting<boolean>({
-		name: 'Change List Glyphs on Indent',
+		name: '缩进时更改列表符号',
 		description: 'Automatically set the glyphs of list items when indenting.',
 		defaultValue: true
 	})
 
 	enableSpellCheck = new Setting<boolean>({
-		name: 'Use Spell Check',
+		name: '使用拼写检查',
 		description: 'Whether Tangent should use spell check or not.',
 		defaultValue: true
 	})
 
 	filenameSpellCheck = new Setting<'never'|'editing'|'always'>({
-		name: 'Spell Check Filenames',
+		name: '检查文件名拼写',
 		description: 'When and how Tangent should use spell check in filenames.',
 		validValues: [
 			{
@@ -575,7 +575,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	contentSpellCheck = new Setting<'never'|'editing'|'always'>({
-		name: 'Spell Check Content',
+		name: '检查内容拼写',
 		description: 'When and how Tangent should use spell check in note content.',
 		validValues: [
 			{
@@ -598,7 +598,7 @@ export default class Settings extends ObjectStore {
 	})
 	
 	spellCheckLanguages = new Setting<string, string[]>({
-		name: 'Additional Spell Check\nLanguages',
+		name: '额外拼写检查\n语言',
 		description: 'Languages that will be added to the spellchecker',
 		defaultValue: []
 	})
@@ -607,59 +607,59 @@ export default class Settings extends ObjectStore {
 	keymap = new KeymapSettings()
 
 	useKeyCodeShortcuts = new Setting<boolean>({
-		name: 'Use KeyCode Shortcuts',
+		name: '使用键码快捷键',
 		description: 'When enabled, keyboard shortcuts will be based off of US Keyboard KeyCode values. They will remain in the same physical location & binding no matter what language is currently active.',
 		defaultValue: false
 	})
 
 	// Code in notes
 	letCodeExpand = new Setting<boolean>({
-		name: 'Extra Wide Code',
+		name: '超宽代码块',
 		description: 'Allow code blocks with long lines to expand into the margins of a note.',
 		defaultValue: true
 	})
 
 	allowUnknownHTMLTags = new Setting<boolean>({
-		name: 'Allow Unknown HTML Tags',
+		name: '允许未知 HTML 标签',
 		description: 'When true, allow HTML sections to be started by non-standard HTML tag names. (Requires restart.)',
 		defaultValue: false
 	})
 
 	collapseFrontMatter = new Setting<boolean>({
-		name: 'Collapse Front Matter',
+		name: '折叠 Front Matter',
 		description: 'When enabled, front matter will start collapsed.',
 		defaultValue: false
 	})
 
 	// Debug
 	debug_sendCrashReports = new Setting<boolean>({
-		name: 'Send Crash Reports',
+		name: '发送崩溃报告',
 		description: 'When enabled, if Tangent crashes, it will upload a crash report to a third party server to assist with debugging.',
 		defaultValue: false
 	})
 
 	debug_createVirtualFiles = new Setting<boolean>({
-		name: 'Links Can Create Virutal Files',
+		name: '链接可创建虚拟文件',
 		description: 'Whether links that don\'t resolve to a real file should create virtual files. '
 			+ '\n\nThis setting is intended for debugging purposes only.',
 		defaultValue: true
 	})
 
 	debug_sendItemsToTrash = new Setting<boolean>({
-		name: 'Trash Deleted Items',
+		name: '删除项移至废纸篓',
 		description: 'Whether or not deleted items should be sent to the OS trash/recycling bin.'
 			+ '\n\nIf deleting items causes issues, try disabling this setting.',
 		defaultValue: true
 	})
 
 	debug_ioQueue_enable = new Setting<boolean>({
-		name: 'Use IO Queue',
+		name: '使用 IO 队列',
 		description: 'Whether or not to use an IO queue for reading certain files. Experimental.',
 		defaultValue: false
 	})
 
 	debug_ioQueue_maxActive = new Setting<number>({
-		name: 'Max Active IO Queue Items',
+		name: '最大活跃 IO 队列项',
 		description: 'Sets the maximum number of files that can be processed at once.',
 		defaultValue: 100,
 		range: {
@@ -670,7 +670,7 @@ export default class Settings extends ObjectStore {
 	})
 
 	debug_maxDisplayedAnnotations = new Setting<number>({
-		name: 'Max displayed annotations',
+		name: '最大显示标注数',
 		description: 'Sets the maximum number of note annotations (e.g. search results) that will be displayed at once.',
 		defaultValue: 100,
 		range: {

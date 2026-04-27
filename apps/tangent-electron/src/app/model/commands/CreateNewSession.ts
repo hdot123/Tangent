@@ -20,11 +20,11 @@ export class CreateNewSessionCommand extends WorkspaceCommand {
 	}
 
 	getLabel(context?: CommandContext) {
-		return 'Create New Session'
+		return '创建新会话'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Creates a new session with its own thread history and map. The previous session will still be visible in the map view.'
+		return '创建一个具有独立线索历史和地图的新会话。之前的会话在地图视图中仍可见。'
 	}
 }
 
@@ -55,12 +55,12 @@ export class CreateNewSessionFromThreadCommand extends WorkspaceCommand {
 
 	getLabel(context?: CreateNewSessionFromThreadCommandContext) {
 		if (context?.thread) {
-			return 'Create New Session from Thread'
+			return '从线索创建新会话'
 		}
-		return 'Create New Session from Current Thread'
+		return '从当前线索创建新会话'
 	}
 
 	getTooltip(context?: CommandContext) {
-		return 'Creates a new session that is seeded with the given thread. The previous session will still be visible in the map view.'
+		return '创建一个以给定线索为基础的新会话。之前的会话在地图视图中仍可见。'
 	}
 }
